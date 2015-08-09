@@ -13,6 +13,9 @@
 		2CA3BA3E1B77ECF300E04DCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BA3D1B77ECF300E04DCC /* Images.xcassets */; };
 		2CA3BA411B77ECF300E04DCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BA3F1B77ECF300E04DCC /* LaunchScreen.xib */; };
 		2CA3BA4D1B77ECF400E04DCC /* lotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3BA4C1B77ECF400E04DCC /* lotusTests.swift */; };
+		2CE913861B781634008FCCE4 /* ViewController_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913851B781634008FCCE4 /* ViewController_Profile.swift */; };
+		2CE913881B781648008FCCE4 /* ViewController_Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913871B781648008FCCE4 /* ViewController_Sync.swift */; };
+		2CE9138A1B78165A008FCCE4 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913891B78165A008FCCE4 /* ViewController_Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		2CA3BA461B77ECF400E04DCC /* lotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3BA4B1B77ECF400E04DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA3BA4C1B77ECF400E04DCC /* lotusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotusTests.swift; sourceTree = "<group>"; };
+		2CE913851B781634008FCCE4 /* ViewController_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Profile.swift; sourceTree = "<group>"; };
+		2CE913871B781648008FCCE4 /* ViewController_Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Sync.swift; sourceTree = "<group>"; };
+		2CE913891B78165A008FCCE4 /* ViewController_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				2CA3BA3D1B77ECF300E04DCC /* Images.xcassets */,
 				2CA3BA3F1B77ECF300E04DCC /* LaunchScreen.xib */,
 				2CA3BA341B77ECF300E04DCC /* Supporting Files */,
+				2CE913851B781634008FCCE4 /* ViewController_Profile.swift */,
+				2CE913871B781648008FCCE4 /* ViewController_Sync.swift */,
+				2CE913891B78165A008FCCE4 /* ViewController_Login.swift */,
 			);
 			path = lotus;
 			sourceTree = "<group>";
@@ -213,6 +222,9 @@
 			files = (
 				2CA3BA391B77ECF300E04DCC /* ViewController.swift in Sources */,
 				2CA3BA371B77ECF300E04DCC /* AppDelegate.swift in Sources */,
+				2CE9138A1B78165A008FCCE4 /* ViewController_Login.swift in Sources */,
+				2CE913861B781634008FCCE4 /* ViewController_Profile.swift in Sources */,
+				2CE913881B781648008FCCE4 /* ViewController_Sync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +422,7 @@
 				2CA3BA521B77ECF400E04DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CA3BA531B77ECF400E04DCC /* Build configuration list for PBXNativeTarget "lotusTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +431,7 @@
 				2CA3BA551B77ECF400E04DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
