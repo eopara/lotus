@@ -10,11 +10,12 @@ import UIKit
 
 var y = 10
 
-class ViewController: UIViewController {
+class ViewController_Login: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let x = 2
     }
 
     override func didReceiveMemoryWarning() {
