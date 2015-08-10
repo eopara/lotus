@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController_Profile: UIViewController {
 
+    @IBOutlet weak var buttonNext: UIButton!
+    @IBOutlet weak var fnTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        styleTextField(fnTextField, 3.0, UIColor.blackColor().CGColor)
+        
         // Do any additional setup after loading the view.
     }
 
