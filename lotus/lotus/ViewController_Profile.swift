@@ -12,10 +12,24 @@ class ViewController_Profile: UIViewController {
 
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var fnTextField: UITextField!
+    @IBOutlet weak var lnTextField: UITextField!
+    @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var dayTextField: UITextField!
+    @IBOutlet weak var monthTextField: UITextField!
+    @IBOutlet weak var yearTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleTextField(fnTextField, 3.0, UIColor.blackColor().CGColor)
+        self.view.backgroundColor = UIColor.blackColor()
+        styleTextField(fnTextField, 1.5, UIColor.whiteColor().CGColor)
+        styleTextField(lnTextField, 1.5, UIColor.whiteColor().CGColor)
+        styleTextField(zipTextField, 1.5, UIColor.whiteColor().CGColor)
+        styleTextField(dayTextField, 1.5, UIColor.whiteColor().CGColor)
+        styleTextField(monthTextField, 1.5, UIColor.whiteColor().CGColor)
+        styleTextField(yearTextField, 1.5, UIColor.whiteColor().CGColor)
+
+
+        
         
         // Do any additional setup after loading the view.
     }

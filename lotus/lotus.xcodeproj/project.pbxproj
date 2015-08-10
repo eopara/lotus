@@ -17,6 +17,7 @@
 		2CE913881B781648008FCCE4 /* ViewController_Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913871B781648008FCCE4 /* ViewController_Sync.swift */; };
 		2CE9138A1B78165A008FCCE4 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913891B78165A008FCCE4 /* ViewController_Login.swift */; };
 		2CE9138C1B781FDD008FCCE4 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9138B1B781FDD008FCCE4 /* global.swift */; };
+		2CE9138E1B792A05008FCCE4 /* profile_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CE9138D1B792A05008FCCE4 /* profile_background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2CE913871B781648008FCCE4 /* ViewController_Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Sync.swift; sourceTree = "<group>"; };
 		2CE913891B78165A008FCCE4 /* ViewController_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
 		2CE9138B1B781FDD008FCCE4 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		2CE9138D1B792A05008FCCE4 /* profile_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		2CA3BA341B77ECF300E04DCC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CE9138D1B792A05008FCCE4 /* profile_background.jpg */,
 				2CA3BA351B77ECF300E04DCC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA3BA3C1B77ECF300E04DCC /* Main.storyboard in Resources */,
+				2CE9138E1B792A05008FCCE4 /* profile_background.jpg in Resources */,
 				2CA3BA411B77ECF300E04DCC /* LaunchScreen.xib in Resources */,
 				2CA3BA3E1B77ECF300E04DCC /* Images.xcassets in Resources */,
 			);
