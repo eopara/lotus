@@ -20,16 +20,25 @@ class ViewController_Profile: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blackColor()
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "profile_background.jpg")!) //not using imageview
         styleTextField(fnTextField, 1.5, UIColor.whiteColor().CGColor)
         styleTextField(lnTextField, 1.5, UIColor.whiteColor().CGColor)
         styleTextField(zipTextField, 1.5, UIColor.whiteColor().CGColor)
         styleTextField(dayTextField, 1.5, UIColor.whiteColor().CGColor)
         styleTextField(monthTextField, 1.5, UIColor.whiteColor().CGColor)
         styleTextField(yearTextField, 1.5, UIColor.whiteColor().CGColor)
-
-
-        
+        fnTextField.attributedPlaceholder = NSAttributedString(string:"First Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        lnTextField.attributedPlaceholder = NSAttributedString(string:"Last Name",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        zipTextField.attributedPlaceholder = NSAttributedString(string:"Zip",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        dayTextField.attributedPlaceholder = NSAttributedString(string:"Day",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        monthTextField.attributedPlaceholder = NSAttributedString(string:"Month",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        yearTextField.attributedPlaceholder = NSAttributedString(string:"Year",
+            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         
         // Do any additional setup after loading the view.
     }
