@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController_Profile: UIViewController {
+class ViewController_Profile: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var fnTextField: UITextField!
@@ -18,29 +18,52 @@ class ViewController_Profile: UIViewController {
     @IBOutlet weak var monthTextField: UITextField!
     @IBOutlet weak var yearTextField: UITextField!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "profile_background.jpg")!) //not using imageview
-        styleTextField(fnTextField, 1.5, UIColor.whiteColor().CGColor)
-        styleTextField(lnTextField, 1.5, UIColor.whiteColor().CGColor)
-        styleTextField(zipTextField, 1.5, UIColor.whiteColor().CGColor)
-        styleTextField(dayTextField, 1.5, UIColor.whiteColor().CGColor)
-        styleTextField(monthTextField, 1.5, UIColor.whiteColor().CGColor)
-        styleTextField(yearTextField, 1.5, UIColor.whiteColor().CGColor)
-        fnTextField.attributedPlaceholder = NSAttributedString(string:"First Name",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
-        lnTextField.attributedPlaceholder = NSAttributedString(string:"Last Name",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
-        zipTextField.attributedPlaceholder = NSAttributedString(string:"Zip",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
-        dayTextField.attributedPlaceholder = NSAttributedString(string:"Day",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
-        monthTextField.attributedPlaceholder = NSAttributedString(string:"Month",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
-        yearTextField.attributedPlaceholder = NSAttributedString(string:"Year",
-            attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         
-        // Do any additional setup after loading the view.
+        
+        //style text fields
+        styleTextField(fnTextField, 1.5, UIColor.whiteColor().CGColor, "First Name")
+        styleTextField(lnTextField, 1.5, UIColor.whiteColor().CGColor, "Last Name")
+        styleTextField(zipTextField, 1.5, UIColor.whiteColor().CGColor, "Zip")
+        styleTextField(dayTextField, 1.5, UIColor.whiteColor().CGColor, "Day")
+        styleTextField(monthTextField, 1.5, UIColor.whiteColor().CGColor, "Month")
+        styleTextField(yearTextField, 1.5, UIColor.whiteColor().CGColor, "Year")
+        
+        
+        //set delagates to the view controller
+        fnTextField.delegate = self
+        lnTextField.delegate = self
+        zipTextField.delegate = self
+        dayTextField.delegate = self
+        monthTextField.delegate = self
+        yearTextField.delegate = self
+        
+        //setting the next field property
+        self.fnTextField.nextField = self.lnTextField
+        self.lnTextField.nextField = self.zipTextField
+        self.zipTextField.nextField = self.dayTextField
+        self.dayTextField.nextField = self.monthTextField
+        self.monthTextField.nextField = self.yearTextField
+        
+        
+        dayTextField.inputView = UIView(frame: CGRectZero)
+        monthTextField.inputView = UIView(frame: CGRectZero)
+        yearTextField.inputView = UIView(frame: CGRectZero)
+    
+        
+        //set datepicker attributes
+        datePicker.backgroundColor = UIColor.whiteColor()
+        datePicker.maximumDate = NSDate()
+        datePicker.hidden = true
+        
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +71,59 @@ class ViewController_Profile: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func textFieldShouldBegin(sender: UITextField) {
+        datePicker.hidden = false
+        datePicker.datePickerMode = UIDatePickerMode.Date
+        
+        datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
 
+    @IBAction func yearFieldShouldBegin(sender: UITextField) {
+        datePicker.hidden = false
+        datePicker.datePickerMode = UIDatePickerMode.Date
+        
+        datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    @IBAction func monthFieldShouldBegin(sender: UITextField) {
+        datePicker.hidden = false
+        datePicker.datePickerMode = UIDatePickerMode.Date
+        
+        datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        dayTextField.text = getDayFromDate(sender.date)
+        yearTextField.text = getYearFromDate(sender.date)
+        monthTextField.text = getMonthFromDate(sender.date)
+    }
+    
+    @IBAction func dayEndEditing(sender: UITextField) {
+        datePicker.hidden = true
+    }
+    
+    @IBAction func monthEndEditing(sender: UITextField) {
+        datePicker.hidden = true
+    }
+    
+    @IBAction func yearEndEditing(sender: UITextField) {
+        datePicker.hidden = true
+    }
+    
+    //UI Flow methods
+    
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //next field method
+        textField.nextField?.becomeFirstResponder()
+        return true
+    }
+    
+    
     /*
     // MARK: - Navigation
 

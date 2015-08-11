@@ -12,8 +12,8 @@ import UIKit
 //
 
 
-func styleTextField(textField: UITextField, borderWidth: CGFloat, borderColor: CGColor) {
-    ///Styles text field with an underline given a UITextField, CGFloat width, and a CGColor for the border color
+func styleTextField(textField: UITextField, borderWidth: CGFloat, borderColor: CGColor, placeHolderText: String) {
+    ///Styles text field with an underline given a UITextField, CGFloat width, and a CGColor for the border color and placeholer text
     
     let border = CALayer()
     let width = CGFloat(borderWidth)
@@ -23,8 +23,61 @@ func styleTextField(textField: UITextField, borderWidth: CGFloat, borderColor: C
     border.borderWidth = width
     textField.layer.addSublayer(border)
     textField.layer.masksToBounds = true
+    textField.attributedPlaceholder = NSAttributedString(string: placeHolderText,
+        attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
     
 }
+
+
+//can return date data in dd mmm yyyy formating
+func getDayFromDate(date: NSDate) -> String {
+    //returns day from dd mmm yyyy NSDate formatting
+    var dateFormatter = NSDateFormatter()
+    
+    dateFormatter.dateFormat = "dd MMM yyyy"
+    
+    var dateStr = dateFormatter.stringFromDate(date)
+    let idx = advance(dateStr.startIndex, 2)
+    
+    return dateStr.substringToIndex(idx)
+}
+
+func getMonthFromDate(date: NSDate) -> String {
+    //returns month from dd mmm yyyy NSDate formatting
+    var dateFormatter = NSDateFormatter()
+    
+    dateFormatter.dateFormat = "dd MMM yyyy"
+    
+    var dateStr = dateFormatter.stringFromDate(date)
+    
+    let idx = advance(dateStr.startIndex, 2)
+    
+    let idxM = advance(dateStr.endIndex, -4)
+    
+    var day = dateStr.substringToIndex(idx)
+    var year = dateStr.substringFromIndex(idxM)
+    var month = dateStr.stringByReplacingOccurrencesOfString(day, withString: "")
+    month = month.stringByReplacingOccurrencesOfString(year, withString: "")
+    
+    month = month.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+    
+    return month
+    
+}
+
+func getYearFromDate(date: NSDate) -> String {
+    //returns year from dd mmm yyyy NSDate formatting
+    var dateFormatter = NSDateFormatter()
+    
+    dateFormatter.dateFormat = "dd MMM yyyy"
+    
+    var dateStr = dateFormatter.stringFromDate(date)
+    let idx = advance(dateStr.endIndex, -4)
+    
+    return dateStr.substringFromIndex(idx)
+    
+}
+
 
 extension UIColor {
     
@@ -50,3 +103,17 @@ extension UIColor {
     }
 }
 
+//expanding UITextField to know what is the "next" text field in the flow
+
+private var kAssociationKeyNextField: UInt8 = 0
+
+extension UITextField {
+    var nextField: UITextField? {
+        get {
+            return objc_getAssociatedObject(self, &kAssociationKeyNextField) as? UITextField
+        }
+        set(newField) {
+            objc_setAssociatedObject(self, &kAssociationKeyNextField, newField, UInt(OBJC_ASSOCIATION_RETAIN))
+        }
+    }
+}
