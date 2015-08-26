@@ -10,13 +10,15 @@ import UIKit
 
 var user: User?
 
-class ViewController_Login: UIViewController {
+class ViewController_Login: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         //User.logout()
+        
+        Facebook.addLoginButton(self)
         
         if(User.isLoggedIn().status) {
             user = User()
@@ -28,6 +30,24 @@ class ViewController_Login: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if ((error) != nil) {
+            // Process error
+            println("Error: \(error)")
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+            println("Cancelled")
+        }
+        else {
+            Facebook.login()
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        Facebook.logout()
     }
     
     @IBAction func twitterButtonPressed(sender: AnyObject) {
