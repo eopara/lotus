@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>134D7FE3-7050-46F0-BACF-3AAD78AA9B65</string>
+	<key>IDESourceControlProjectName</key>
+	<string>lotus</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>43EBC278813CCEB80EE6BCE8C4B8A3B8526F85FA</key>
+		<string>https://github.com/eoteammobile/lotus.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>lotus/lotus.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>43EBC278813CCEB80EE6BCE8C4B8A3B8526F85FA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/eoteammobile/lotus.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>43EBC278813CCEB80EE6BCE8C4B8A3B8526F85FA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>43EBC278813CCEB80EE6BCE8C4B8A3B8526F85FA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Lotus</string>
+		</dict>
+	</array>
+</dict>
+</plist>
