@@ -30,41 +30,6 @@
 			remoteGlobalIDString = 2CA3BA301B77ECF300E04DCC;
 			remoteInfo = lotus;
 		};
-		2CFA3B8A1B9E3A18005AC96A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F451E3C5195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		2CFA3B8C1B9E3A18005AC96A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F435027A1A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-		2CFA3B8E1B9E3A18005AC96A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
-			remoteInfo = OAuthSwiftOSXDemo;
-		};
-		2CFA3B901B9E3A18005AC96A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
-			remoteInfo = OAuthSwiftOSX;
-		};
-		2CFA3B991B9E3B47005AC96A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F43502791A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +47,7 @@
 		2CE913891B78165A008FCCE4 /* ViewController_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
 		2CE9138B1B781FDD008FCCE4 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 		2CFA3B811B9E2D6E005AC96A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = ../../../Downloads/OAuthSwift.xcodeproj; sourceTree = "<group>"; };
+		2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = ../../../../Downloads/OAuthSwift.xcodeproj; sourceTree = "<group>"; };
 		5EE1DD291B8C0FF00075A6B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5EEE1AFB1B8D5AA80080B52B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		5EEE1AFC1B8D5AA80080B52B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -115,7 +80,6 @@
 				2CA3BA331B77ECF300E04DCC /* lotus */,
 				2CA3BA491B77ECF400E04DCC /* lotusTests */,
 				2CA3BA321B77ECF300E04DCC /* Products */,
-				2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +95,7 @@
 		2CA3BA331B77ECF300E04DCC /* lotus */ = {
 			isa = PBXGroup;
 			children = (
+				2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */,
 				5EEE1AFB1B8D5AA80080B52B /* FBSDKCoreKit.framework */,
 				5EEE1AFC1B8D5AA80080B52B /* FBSDKLoginKit.framework */,
 				5EEE1AFF1B8D5B810080B52B /* FBBridgingHeader.h */,
@@ -174,17 +139,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2CFA3B841B9E3A18005AC96A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2CFA3B8B1B9E3A18005AC96A /* OAuthSwiftDemo.app */,
-				2CFA3B8D1B9E3A18005AC96A /* OAuthSwift.framework */,
-				2CFA3B8F1B9E3A18005AC96A /* OAuthSwiftOSXDemo.app */,
-				2CFA3B911B9E3A18005AC96A /* OAuthSwiftOSX.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,7 +153,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2CFA3B9A1B9E3B47005AC96A /* PBXTargetDependency */,
 			);
 			name = lotus;
 			productName = lotus;
@@ -252,12 +205,6 @@
 			mainGroup = 2CA3BA281B77ECF300E04DCC;
 			productRefGroup = 2CA3BA321B77ECF300E04DCC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2CFA3B841B9E3A18005AC96A /* Products */;
-					ProjectRef = 2CFA3B831B9E3A18005AC96A /* OAuthSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2CA3BA301B77ECF300E04DCC /* lotus */,
@@ -265,37 +212,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		2CFA3B8B1B9E3A18005AC96A /* OAuthSwiftDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftDemo.app;
-			remoteRef = 2CFA3B8A1B9E3A18005AC96A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2CFA3B8D1B9E3A18005AC96A /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 2CFA3B8C1B9E3A18005AC96A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2CFA3B8F1B9E3A18005AC96A /* OAuthSwiftOSXDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftOSXDemo.app;
-			remoteRef = 2CFA3B8E1B9E3A18005AC96A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2CFA3B911B9E3A18005AC96A /* OAuthSwiftOSX.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwiftOSX.framework;
-			remoteRef = 2CFA3B901B9E3A18005AC96A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2CA3BA2F1B77ECF300E04DCC /* Resources */ = {
@@ -347,11 +263,6 @@
 			isa = PBXTargetDependency;
 			target = 2CA3BA301B77ECF300E04DCC /* lotus */;
 			targetProxy = 2CA3BA471B77ECF400E04DCC /* PBXContainerItemProxy */;
-		};
-		2CFA3B9A1B9E3B47005AC96A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuthSwift;
-			targetProxy = 2CFA3B991B9E3B47005AC96A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
