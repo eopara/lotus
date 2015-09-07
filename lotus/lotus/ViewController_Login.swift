@@ -18,6 +18,7 @@ class ViewController_Login: UIViewController, FBSDKLoginButtonDelegate {
         
         //User.logout()
         
+        
         Facebook.addLoginButton(self)
         
         if(User.isLoggedIn().status) {
