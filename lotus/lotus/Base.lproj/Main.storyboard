@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -7,13 +7,16 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Merriweather-Light.ttf">
+            <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
+        </mutableArray>
         <mutableArray key="Merriweather-Regular.ttf">
-            <string>Merriweather</string>
-            <string>Merriweather</string>
-            <string>Merriweather</string>
-            <string>Merriweather</string>
-            <string>Merriweather</string>
-            <string>Merriweather</string>
             <string>Merriweather</string>
         </mutableArray>
     </customFonts>
@@ -65,49 +68,61 @@
                                     <constraint firstAttribute="height" constant="722" id="Sf5-JY-snD"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-mm-IHu">
+                                <rect key="frame" x="32" y="312" width="536" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="536" id="IK6-Ar-vzR"/>
+                                    <constraint firstAttribute="height" constant="30" id="RJ4-h3-GVe"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13b-bx-Kck">
                                 <rect key="frame" x="32" y="206" width="536" height="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Day" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-Ci-CGP">
-                                <rect key="frame" x="32" y="257" width="55" height="30"/>
+                                <rect key="frame" x="32" y="257" width="70" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="EoN-QY-MRS"/>
+                                    <constraint firstAttribute="width" constant="70" id="EoN-QY-MRS"/>
                                     <constraint firstAttribute="height" constant="30" id="GvT-88-jG3"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="dayEndEditing:" destination="D3U-Xt-etH" eventType="editingDidEnd" id="tGw-v8-zrx"/>
-                                    <action selector="monthFieldShouldBegin:" destination="D3U-Xt-etH" eventType="editingDidBegin" id="oCl-BJ-dDf"/>
+                                    <action selector="dayFieldShouldBegin:" destination="D3U-Xt-etH" eventType="editingDidBegin" id="X0f-Gf-UAv"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ed3-0h-FM6">
-                                <rect key="frame" x="136" y="257" width="55" height="30"/>
+                                <rect key="frame" x="136" y="257" width="70" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="4lq-1K-T2A"/>
+                                    <constraint firstAttribute="width" constant="70" id="4lq-1K-T2A"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="monthEndEditing:" destination="D3U-Xt-etH" eventType="editingDidEnd" id="fVy-4t-GFj"/>
-                                    <action selector="textFieldShouldBegin:" destination="D3U-Xt-etH" eventType="editingDidBegin" id="G4h-45-zNl"/>
+                                    <action selector="monthEndEditing:" destination="D3U-Xt-etH" eventType="editingDidEnd" id="PqQ-uV-9Va"/>
+                                    <action selector="monthFieldChanged:" destination="D3U-Xt-etH" eventType="editingChanged" id="eSz-7O-f0w"/>
+                                    <action selector="monthFieldShouldBegin:" destination="D3U-Xt-etH" eventType="editingDidBegin" id="KiQ-wU-Vq8"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efd-7n-DLj">
-                                <rect key="frame" x="240" y="257" width="55" height="30"/>
+                                <rect key="frame" x="240" y="257" width="70" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="nbl-fK-dpi"/>
+                                    <constraint firstAttribute="width" constant="70" id="nbl-fK-dpi"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="yearEndEditing:" destination="D3U-Xt-etH" eventType="editingDidEnd" id="1gG-Fp-QOZ"/>
+                                    <action selector="yearFieldChanged:" destination="D3U-Xt-etH" eventType="editingChanged" id="F1v-vh-f9p"/>
                                     <action selector="yearFieldShouldBegin:" destination="D3U-Xt-etH" eventType="editingDidBegin" id="yDt-ys-SyE"/>
                                 </connections>
                             </textField>
@@ -118,32 +133,9 @@
                                     <constraint firstAttribute="height" constant="30" id="zJg-zr-RxQ"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDE-BP-wQw">
-                                <rect key="frame" x="265" y="295" width="70" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="biF-Pg-d6M"/>
-                                    <constraint firstAttribute="width" constant="70" id="fQD-4U-aYZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="6Wc-DV-0OF" kind="presentation" id="WcS-dK-MtI"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="k3p-gv-KMw">
                                 <rect key="frame" x="0.0" y="420" width="600" height="180"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,22 +152,47 @@
                                     <constraint firstAttribute="height" constant="30" id="XaY-eB-LRY"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDE-BP-wQw">
+                                <rect key="frame" x="265" y="342" width="70" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="biF-Pg-d6M"/>
+                                    <constraint firstAttribute="width" constant="70" id="fQD-4U-aYZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="6Wc-DV-0OF" kind="presentation" id="WcS-dK-MtI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="95U-KN-xOQ" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="235" id="1ZR-8V-03P"/>
+                            <constraint firstItem="95U-KN-xOQ" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="188" id="1ZR-8V-03P"/>
                             <constraint firstItem="2lt-7O-qKe" firstAttribute="height" secondItem="13b-bx-Kck" secondAttribute="height" id="1fk-MX-FwI"/>
                             <constraint firstItem="SDE-BP-wQw" firstAttribute="centerX" secondItem="APx-EA-E0P" secondAttribute="centerX" id="62I-ae-ITn"/>
+                            <constraint firstItem="m0q-mm-IHu" firstAttribute="top" secondItem="yxe-Ci-CGP" secondAttribute="bottom" constant="25" id="Agr-Kw-yVb"/>
                             <constraint firstItem="95U-KN-xOQ" firstAttribute="top" secondItem="k3p-gv-KMw" secondAttribute="bottom" id="Bvw-0g-EMZ"/>
                             <constraint firstItem="ed3-0h-FM6" firstAttribute="bottom" secondItem="yxe-Ci-CGP" secondAttribute="bottom" id="Cgb-49-NPZ"/>
+                            <constraint firstAttribute="trailing" secondItem="m0q-mm-IHu" secondAttribute="trailing" constant="32" id="DOw-fj-RQJ"/>
                             <constraint firstItem="13b-bx-Kck" firstAttribute="top" secondItem="2lt-7O-qKe" secondAttribute="bottom" constant="21" id="DsW-gF-dqj"/>
                             <constraint firstItem="SDE-BP-wQw" firstAttribute="centerX" secondItem="13b-bx-Kck" secondAttribute="centerX" id="EAl-fF-uwM"/>
                             <constraint firstItem="13b-bx-Kck" firstAttribute="trailing" secondItem="2lt-7O-qKe" secondAttribute="trailing" id="FXq-4Z-fFL"/>
                             <constraint firstItem="yxe-Ci-CGP" firstAttribute="baseline" secondItem="efd-7n-DLj" secondAttribute="firstBaseline" id="GH2-N2-v9B"/>
-                            <constraint firstItem="efd-7n-DLj" firstAttribute="leading" secondItem="ed3-0h-FM6" secondAttribute="trailing" constant="49" id="Mfg-GQ-TmC"/>
+                            <constraint firstItem="efd-7n-DLj" firstAttribute="leading" secondItem="ed3-0h-FM6" secondAttribute="trailing" constant="34" id="Mfg-GQ-TmC"/>
                             <constraint firstItem="2lt-7O-qKe" firstAttribute="top" secondItem="4oe-ag-VRd" secondAttribute="bottom" constant="21" id="NJ7-qO-Tfs"/>
                             <constraint firstItem="4oe-ag-VRd" firstAttribute="leading" secondItem="2uT-MB-eeZ" secondAttribute="leadingMargin" constant="16" id="OZU-sN-JAX"/>
                             <constraint firstItem="yxe-Ci-CGP" firstAttribute="top" secondItem="13b-bx-Kck" secondAttribute="bottom" constant="21" id="Q8m-N1-U8T"/>
@@ -186,15 +203,16 @@
                             <constraint firstAttribute="trailing" secondItem="2lt-7O-qKe" secondAttribute="trailing" constant="32" id="ZXd-uC-E32"/>
                             <constraint firstItem="13b-bx-Kck" firstAttribute="leading" secondItem="yxe-Ci-CGP" secondAttribute="leading" id="Zlg-52-URL"/>
                             <constraint firstAttribute="trailing" secondItem="13b-bx-Kck" secondAttribute="trailing" constant="32" id="doj-tY-bHu"/>
+                            <constraint firstItem="m0q-mm-IHu" firstAttribute="leading" secondItem="yxe-Ci-CGP" secondAttribute="leading" id="evh-Wn-hul"/>
                             <constraint firstItem="4oe-ag-VRd" firstAttribute="top" secondItem="HaE-wX-09w" secondAttribute="bottom" constant="84" id="gJw-Pw-cV8"/>
-                            <constraint firstItem="ed3-0h-FM6" firstAttribute="leading" secondItem="yxe-Ci-CGP" secondAttribute="trailing" constant="49" id="iUc-yJ-udS"/>
+                            <constraint firstItem="ed3-0h-FM6" firstAttribute="leading" secondItem="yxe-Ci-CGP" secondAttribute="trailing" constant="34" id="iUc-yJ-udS"/>
                             <constraint firstItem="APx-EA-E0P" firstAttribute="top" secondItem="2uT-MB-eeZ" secondAttribute="top" id="jik-cl-50x"/>
                             <constraint firstItem="ed3-0h-FM6" firstAttribute="baseline" secondItem="yxe-Ci-CGP" secondAttribute="baseline" id="k7v-tT-NEE"/>
                             <constraint firstItem="yxe-Ci-CGP" firstAttribute="bottom" secondItem="efd-7n-DLj" secondAttribute="bottom" id="mXd-q4-j0Q"/>
                             <constraint firstItem="APx-EA-E0P" firstAttribute="leading" secondItem="2uT-MB-eeZ" secondAttribute="leading" id="osF-eE-fhJ"/>
                             <constraint firstItem="k3p-gv-KMw" firstAttribute="leading" secondItem="APx-EA-E0P" secondAttribute="leading" id="p6a-0R-jrn"/>
                             <constraint firstItem="ed3-0h-FM6" firstAttribute="height" secondItem="yxe-Ci-CGP" secondAttribute="height" id="pym-0L-NLc"/>
-                            <constraint firstItem="k3p-gv-KMw" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="55" id="tIt-6g-rMu"/>
+                            <constraint firstItem="k3p-gv-KMw" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="8" id="tIt-6g-rMu"/>
                             <constraint firstItem="yxe-Ci-CGP" firstAttribute="top" secondItem="efd-7n-DLj" secondAttribute="top" id="z1n-ji-2mN"/>
                         </constraints>
                     </view>
@@ -202,6 +220,7 @@
                         <outlet property="buttonNext" destination="SDE-BP-wQw" id="lNo-Q0-ewh"/>
                         <outlet property="datePicker" destination="k3p-gv-KMw" id="gQm-nl-k3g"/>
                         <outlet property="dayTextField" destination="yxe-Ci-CGP" id="KGx-5K-urb"/>
+                        <outlet property="emailTextField" destination="m0q-mm-IHu" id="UNm-0F-kAq"/>
                         <outlet property="fnTextField" destination="4oe-ag-VRd" id="AoJ-zq-mxf"/>
                         <outlet property="lnTextField" destination="2lt-7O-qKe" id="GKJ-pZ-MyJ"/>
                         <outlet property="monthTextField" destination="ed3-0h-FM6" id="Zdm-wD-Zh7"/>
