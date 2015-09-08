@@ -27,10 +27,19 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     @IBOutlet weak var emailClear: UIImageView!
     @IBOutlet weak var pwClear: UIImageView!
     
+    @IBOutlet weak var viewContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "placeholder.jpg")!.alpha(0.5))
+        
+        viewContainer.addSubview(emailField)
+        viewContainer.addSubview(pwField)
+        viewContainer.addSubview(emailClear)
+        viewContainer.addSubview(pwClear)
+        viewContainer.hidden = true
+        
+        
         
         let tapGther = UITapGestureRecognizer(target: self, action: Selector("tappedG"))
         
@@ -56,11 +65,6 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         styleTextField(emailField, 1.5, UIColor.whiteColor().CGColor, "Email")
         styleTextField(pwField, 1.5, UIColor.whiteColor().CGColor, "Password")
         
-        //hide gther login field
-        emailField.hidden = true
-        pwField.hidden = true
-        emailClear.hidden = true
-        pwClear.hidden = true
         
         //set the delagate to the view controller
         emailField.delegate = self
@@ -118,21 +122,14 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         
         gtherBtn.image = UIImage(named: "gtherbtn_white.png")
         
-        //enable login fields
-        emailField.hidden = false
-        pwField.hidden = false
-        emailClear.hidden = false
-        pwClear.hidden = false
+        viewContainer.hidden = false
     }
     
     func tappedF() {
         //custom login button for facebook
         //hide gther login field
         gtherBtn.image = UIImage(named: "gtherbtn.png")
-        emailField.hidden = true
-        pwField.hidden = true
-        emailClear.hidden = true
-        pwClear.hidden = true
+        viewContainer.hidden = false
         
         var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in

@@ -99,20 +99,29 @@
                                 <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                             </textField>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-qO-09O">
+                                <rect key="frame" x="32" y="353" width="536" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C9p-7b-Czg" firstAttribute="top" secondItem="JN5-uR-cnT" secondAttribute="bottom" constant="8" symbolic="YES" id="2Az-42-kGv"/>
+                            <constraint firstItem="Zdp-qO-09O" firstAttribute="leading" secondItem="bNH-6z-EkE" secondAttribute="leading" id="2bm-ri-kts"/>
                             <constraint firstItem="hO0-ZA-UIU" firstAttribute="centerY" secondItem="suL-VE-0Ge" secondAttribute="centerY" constant="-2.5" id="9UN-nN-lfZ"/>
                             <constraint firstItem="bNH-6z-EkE" firstAttribute="top" secondItem="hO0-ZA-UIU" secondAttribute="bottom" constant="24" id="DPc-qY-C21"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="leading" secondItem="hO0-ZA-UIU" secondAttribute="leading" id="Gkq-yH-pdu"/>
+                            <constraint firstItem="Zdp-qO-09O" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="top" id="HfE-4O-Yfk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="217" id="NSg-Gi-Zzu"/>
                             <constraint firstItem="JN5-uR-cnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="QBR-XK-9ei"/>
+                            <constraint firstAttribute="bottom" secondItem="Zdp-qO-09O" secondAttribute="bottom" constant="173" id="RR5-hH-Pj6"/>
                             <constraint firstItem="C9p-7b-Czg" firstAttribute="top" secondItem="sSk-AL-wz1" secondAttribute="top" id="Rce-f4-sMu"/>
+                            <constraint firstItem="Zdp-qO-09O" firstAttribute="bottom" secondItem="bNH-6z-EkE" secondAttribute="bottom" id="Tui-Ah-kxt"/>
                             <constraint firstItem="hO0-ZA-UIU" firstAttribute="trailing" secondItem="suL-VE-0Ge" secondAttribute="trailing" constant="-5" id="XIa-Fe-2sB"/>
                             <constraint firstItem="bNH-6z-EkE" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="14" id="XPp-bA-ET0"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="19" id="ZDr-9A-oTJ"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="centerY" secondItem="bNH-6z-EkE" secondAttribute="centerY" constant="-2.5" id="ZV7-K7-3jy"/>
+                            <constraint firstItem="Zdp-qO-09O" firstAttribute="trailing" secondItem="suL-VE-0Ge" secondAttribute="trailing" id="bkS-l6-Fxk"/>
                             <constraint firstItem="sSk-AL-wz1" firstAttribute="leading" secondItem="C9p-7b-Czg" secondAttribute="trailing" constant="55" id="fC9-fE-yz1"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="trailing" secondItem="bNH-6z-EkE" secondAttribute="trailing" constant="-5" id="fMs-eD-nzF"/>
                             <constraint firstItem="bNH-6z-EkE" firstAttribute="leading" secondItem="suL-VE-0Ge" secondAttribute="leading" id="gXr-np-POA"/>
@@ -137,6 +146,7 @@
                         <outlet property="pwClear" destination="buY-QX-acC" id="hEv-qf-I4x"/>
                         <outlet property="pwField" destination="bNH-6z-EkE" id="YfN-s1-XVn"/>
                         <outlet property="twitterBtn" destination="sSk-AL-wz1" id="cKe-un-87t"/>
+                        <outlet property="viewContainer" destination="Zdp-qO-09O" id="9bM-FB-kFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
