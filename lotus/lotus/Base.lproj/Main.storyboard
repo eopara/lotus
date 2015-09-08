@@ -20,6 +20,8 @@
         </mutableArray>
         <mutableArray key="Merriweather-Regular.ttf">
             <string>Merriweather</string>
+            <string>Merriweather</string>
+            <string>Merriweather</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -88,7 +90,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNH-6z-EkE" userLabel="Password">
                                 <rect key="frame" x="32" y="397" width="536" height="30"/>
@@ -97,11 +99,60 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-qO-09O">
-                                <rect key="frame" x="32" y="353" width="536" height="74"/>
+                                <rect key="frame" x="32" y="353" width="536" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-Wc-POO" userLabel="Signup">
+                                        <rect key="frame" x="187" y="120" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="xJ5-Kb-E2c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-7w-C26" userLabel="Login">
+                                        <rect key="frame" x="50" y="120" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0Ot-8O-Uri"/>
+                                            <constraint firstAttribute="height" constant="80" id="Fo0-kG-3Du"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LYa-7w-C26" secondAttribute="bottom" id="Iay-xb-WGj"/>
+                                    <constraint firstItem="LYa-7w-C26" firstAttribute="leading" secondItem="Zdp-qO-09O" secondAttribute="leading" constant="50" id="Mmd-4l-oSK"/>
+                                    <constraint firstItem="dxG-Wc-POO" firstAttribute="leading" secondItem="LYa-7w-C26" secondAttribute="trailing" constant="57" id="Sfl-LJ-oAp"/>
+                                    <constraint firstItem="LYa-7w-C26" firstAttribute="baseline" secondItem="dxG-Wc-POO" secondAttribute="firstBaseline" id="SnY-cP-0ku"/>
+                                    <constraint firstItem="LYa-7w-C26" firstAttribute="top" secondItem="dxG-Wc-POO" secondAttribute="top" id="Vts-0t-ru5"/>
+                                    <constraint firstItem="dxG-Wc-POO" firstAttribute="baseline" secondItem="LYa-7w-C26" secondAttribute="firstBaseline" id="dfc-7K-snt"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -114,9 +165,9 @@
                             <constraint firstItem="Zdp-qO-09O" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="top" id="HfE-4O-Yfk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="217" id="NSg-Gi-Zzu"/>
                             <constraint firstItem="JN5-uR-cnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="QBR-XK-9ei"/>
-                            <constraint firstAttribute="bottom" secondItem="Zdp-qO-09O" secondAttribute="bottom" constant="173" id="RR5-hH-Pj6"/>
+                            <constraint firstAttribute="bottom" secondItem="Zdp-qO-09O" secondAttribute="bottom" constant="47" id="RR5-hH-Pj6"/>
                             <constraint firstItem="C9p-7b-Czg" firstAttribute="top" secondItem="sSk-AL-wz1" secondAttribute="top" id="Rce-f4-sMu"/>
-                            <constraint firstItem="Zdp-qO-09O" firstAttribute="bottom" secondItem="bNH-6z-EkE" secondAttribute="bottom" id="Tui-Ah-kxt"/>
+                            <constraint firstItem="Zdp-qO-09O" firstAttribute="bottom" secondItem="bNH-6z-EkE" secondAttribute="bottom" constant="126" id="Tui-Ah-kxt"/>
                             <constraint firstItem="hO0-ZA-UIU" firstAttribute="trailing" secondItem="suL-VE-0Ge" secondAttribute="trailing" constant="-5" id="XIa-Fe-2sB"/>
                             <constraint firstItem="bNH-6z-EkE" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="14" id="XPp-bA-ET0"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="19" id="ZDr-9A-oTJ"/>
@@ -139,6 +190,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bottomViewConstraint" destination="RR5-hH-Pj6" id="YhR-o5-N9t"/>
                         <outlet property="emailClear" destination="hO0-ZA-UIU" id="tSH-9Q-SGX"/>
                         <outlet property="emailField" destination="suL-VE-0Ge" id="TeR-T8-ZIB"/>
                         <outlet property="fbBtn" destination="C9p-7b-Czg" id="PSJ-xZ-hA9"/>
