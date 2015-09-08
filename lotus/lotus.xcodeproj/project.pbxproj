@@ -12,6 +12,12 @@
 		2CA3BA3E1B77ECF300E04DCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BA3D1B77ECF300E04DCC /* Images.xcassets */; };
 		2CA3BA411B77ECF300E04DCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BA3F1B77ECF300E04DCC /* LaunchScreen.xib */; };
 		2CA3BA4D1B77ECF400E04DCC /* lotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3BA4C1B77ECF400E04DCC /* lotusTests.swift */; };
+		2CD8FD451B9E53F300316ACF /* deletebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD411B9E53F300316ACF /* deletebtn.png */; };
+		2CD8FD461B9E53F300316ACF /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD421B9E53F300316ACF /* facebook.png */; };
+		2CD8FD471B9E53F300316ACF /* gtherbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD431B9E53F300316ACF /* gtherbtn.png */; };
+		2CD8FD481B9E53F300316ACF /* twitterbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD441B9E53F300316ACF /* twitterbtn.png */; };
+		2CD8FD521B9F301E00316ACF /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD511B9F301E00316ACF /* placeholder.jpg */; };
+		2CD8FD571B9F3E7C00316ACF /* gtherbtn_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */; };
 		2CE913861B781634008FCCE4 /* ViewController_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913851B781634008FCCE4 /* ViewController_Profile.swift */; };
 		2CE913881B781648008FCCE4 /* ViewController_Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913871B781648008FCCE4 /* ViewController_Sync.swift */; };
 		2CE9138A1B78165A008FCCE4 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913891B78165A008FCCE4 /* ViewController_Login.swift */; };
@@ -77,6 +83,12 @@
 		2CA3BA461B77ECF400E04DCC /* lotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3BA4B1B77ECF400E04DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA3BA4C1B77ECF400E04DCC /* lotusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotusTests.swift; sourceTree = "<group>"; };
+		2CD8FD411B9E53F300316ACF /* deletebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deletebtn.png; path = ../../../../Desktop/deletebtn.png; sourceTree = "<group>"; };
+		2CD8FD421B9E53F300316ACF /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = ../../../../Desktop/facebook.png; sourceTree = "<group>"; };
+		2CD8FD431B9E53F300316ACF /* gtherbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gtherbtn.png; path = ../../../../Desktop/gtherbtn.png; sourceTree = "<group>"; };
+		2CD8FD441B9E53F300316ACF /* twitterbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitterbtn.png; path = ../../../../Desktop/twitterbtn.png; sourceTree = "<group>"; };
+		2CD8FD511B9F301E00316ACF /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = ../../../../Downloads/placeholder.jpg; sourceTree = "<group>"; };
+		2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gtherbtn_white.png; path = ../../../../Desktop/gtherbtn_white.png; sourceTree = "<group>"; };
 		2CE913851B781634008FCCE4 /* ViewController_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Profile.swift; sourceTree = "<group>"; };
 		2CE913871B781648008FCCE4 /* ViewController_Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Sync.swift; sourceTree = "<group>"; };
 		2CE913891B78165A008FCCE4 /* ViewController_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
@@ -140,6 +152,12 @@
 				2CFA3B801B9E2D6E005AC96A /* Main.storyboard */,
 				2CA3BA3F1B77ECF300E04DCC /* LaunchScreen.xib */,
 				2CA3BA341B77ECF300E04DCC /* Supporting Files */,
+				2CD8FD411B9E53F300316ACF /* deletebtn.png */,
+				2CD8FD421B9E53F300316ACF /* facebook.png */,
+				2CD8FD431B9E53F300316ACF /* gtherbtn.png */,
+				2CD8FD441B9E53F300316ACF /* twitterbtn.png */,
+				2CD8FD511B9F301E00316ACF /* placeholder.jpg */,
+				2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */,
 				2CE913851B781634008FCCE4 /* ViewController_Profile.swift */,
 				2CE913871B781648008FCCE4 /* ViewController_Sync.swift */,
 				2CE913891B78165A008FCCE4 /* ViewController_Login.swift */,
@@ -302,9 +320,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD8FD481B9E53F300316ACF /* twitterbtn.png in Resources */,
+				2CD8FD461B9E53F300316ACF /* facebook.png in Resources */,
+				2CD8FD451B9E53F300316ACF /* deletebtn.png in Resources */,
 				2CFA3B821B9E2D6E005AC96A /* Main.storyboard in Resources */,
+				2CD8FD471B9E53F300316ACF /* gtherbtn.png in Resources */,
 				2CA3BA411B77ECF300E04DCC /* LaunchScreen.xib in Resources */,
 				2CA3BA3E1B77ECF300E04DCC /* Images.xcassets in Resources */,
+				2CD8FD571B9F3E7C00316ACF /* gtherbtn_white.png in Resources */,
+				2CD8FD521B9F301E00316ACF /* placeholder.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

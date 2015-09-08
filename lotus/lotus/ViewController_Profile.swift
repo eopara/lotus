@@ -36,6 +36,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "placeholder.jpg")!.alpha(0.5))
         
         //set tags for TextViewDelegate
         fnTextField.tag = FIELD_FN_TAG

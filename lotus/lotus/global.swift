@@ -16,9 +16,7 @@ import UIKit
 //  Created by Cory Dickson on 8/9/15.
 //
 //
-
 //
-
 
 func styleTextField(textField: UITextField, borderWidth: CGFloat, borderColor: CGColor, placeHolderText: String) {
     ///Styles text field with an underline given a UITextField, CGFloat width, and a CGColor for the border color and placeholer text
@@ -112,6 +110,29 @@ extension UIColor {
     
     convenience init(netHex: Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue: netHex & 0xff )
+    }
+}
+
+//extending UIImage class to change alpha values through a method
+extension UIImage {
+    
+    func alpha(value:CGFloat)->UIImage
+    {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, 0.0)
+        
+        var ctx = UIGraphicsGetCurrentContext();
+        let area = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height);
+        
+        CGContextScaleCTM(ctx, 1, -1);
+        CGContextTranslateCTM(ctx, 0, -area.size.height);
+        CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
+        CGContextSetAlpha(ctx, value);
+        CGContextDrawImage(ctx, area, self.CGImage);
+        
+        var newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return newImage;
     }
 }
 
