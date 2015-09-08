@@ -33,6 +33,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Obama-Hand-to-Ear.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7z3-KX-H6i">
+                                <rect key="frame" x="0.0" y="-61" width="600" height="722"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="722" id="aRY-mW-zSS"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Jw-ff9">
                                 <rect key="frame" x="16" y="20" width="46" height="30"/>
                                 <state key="normal" title="Button">
@@ -42,6 +49,15 @@
                                     <segue destination="D3U-Xt-etH" kind="presentation" id="9rb-Bi-Wze"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gtherbtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="JN5-uR-cnT" userLabel="gtherBtn">
+                                <rect key="frame" x="286" y="218" width="27" height="27"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="C9p-7b-Czg" userLabel="facebookBtn">
+                                <rect key="frame" x="262" y="246" width="27" height="27"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitterbtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="sSk-AL-wz1" userLabel="twitterBtn">
+                                <rect key="frame" x="312" y="246" width="27" height="27"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -62,12 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="APx-EA-E0P">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="722"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="722" id="Sf5-JY-snD"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-mm-IHu">
                                 <rect key="frame" x="32" y="312" width="536" height="30"/>
                                 <constraints>
@@ -178,6 +188,12 @@
                                     <segue destination="6Wc-DV-0OF" kind="presentation" id="WcS-dK-MtI"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999994" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="david_cameron.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="APx-EA-E0P">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="722"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="722" id="Sf5-JY-snD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -252,6 +268,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile_background.jpg" width="950" height="1398"/>
+        <image name="Obama-Hand-to-Ear.jpg" width="900" height="600"/>
+        <image name="david_cameron.jpg" width="1876" height="3500"/>
+        <image name="facebook.png" width="473" height="473"/>
+        <image name="gtherbtn.png" width="473" height="473"/>
+        <image name="twitterbtn.png" width="474" height="473"/>
     </resources>
 </document>

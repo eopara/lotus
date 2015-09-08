@@ -16,9 +16,7 @@ import UIKit
 //  Created by Cory Dickson on 8/9/15.
 //
 //
-
 //
-
 
 func styleTextField(textField: UITextField, borderWidth: CGFloat, borderColor: CGColor, placeHolderText: String) {
     ///Styles text field with an underline given a UITextField, CGFloat width, and a CGColor for the border color and placeholer text
