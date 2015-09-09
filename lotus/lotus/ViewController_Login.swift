@@ -28,23 +28,30 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     @IBOutlet weak var pwClear: UIImageView!
     
     @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //load background
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "placeholder.jpg")!.alpha(0.5))
         
+        //add textfield elements to the gther login subview
         viewContainer.addSubview(emailField)
         viewContainer.addSubview(pwField)
         viewContainer.addSubview(emailClear)
         viewContainer.addSubview(pwClear)
         viewContainer.hidden = true
         
+        //keyboard notification
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
-        
+        //set up buttons by adding gestures
         let tapGther = UITapGestureRecognizer(target: self, action: Selector("tappedG"))
-        
         let tapFb = UITapGestureRecognizer(target: self, action: Selector("tappedF"))
-        
         let tapTwitter = UITapGestureRecognizer(target: self, action: Selector("tappedT"))
         
         gtherBtn.addGestureRecognizer(tapGther)
@@ -59,8 +66,10 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         fbBtn.userInteractionEnabled = true
         fbBtn.tag = IMAGE_FB_TAG
         
+        //tag text fields for identification
         emailField.tag = LOGIN_EMAIL_TAG
         pwField.tag = LOGIN_PW_TAG
+        
         //style text fields
         styleTextField(emailField, 1.5, UIColor.whiteColor().CGColor, "Email")
         styleTextField(pwField, 1.5, UIColor.whiteColor().CGColor, "Password")
@@ -73,7 +82,14 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         //setting next field property
         self.emailField.nextField = self.pwField
         
+        //dismiss keyboard
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         // Do any additional setup after loading the view.
+        
+        
+        
         
         if(User.isLoggedIn().status) {
             user = User()
@@ -87,9 +103,33 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         // Dispose of any resources that can be recreated.
     }
     
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func keyboardNotification(notification: NSNotification) {
+        var info = notification.userInfo!
+        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.bottomViewConstraint.constant = keyboardFrame.size.height + 30
+        })
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        var info = notification.userInfo!
+        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.bottomViewConstraint.constant = 173
+        })
+    }
+    
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         //next field method
-        if (textField == emailField) {
+        if (textField == pwField) {
             textField.resignFirstResponder()
         }
         else {
