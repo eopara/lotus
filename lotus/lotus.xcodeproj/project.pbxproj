@@ -169,12 +169,7 @@
 				2CFA3B801B9E2D6E005AC96A /* Main.storyboard */,
 				2CA3BA3F1B77ECF300E04DCC /* LaunchScreen.xib */,
 				2CA3BA341B77ECF300E04DCC /* Supporting Files */,
-				2CD8FD411B9E53F300316ACF /* deletebtn.png */,
-				2CD8FD421B9E53F300316ACF /* facebook.png */,
-				2CD8FD431B9E53F300316ACF /* gtherbtn.png */,
-				2CD8FD441B9E53F300316ACF /* twitterbtn.png */,
-				2CD8FD511B9F301E00316ACF /* placeholder.jpg */,
-				2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */,
+				2CD8FD6A1BA1DF8C00316ACF /* images */,
 				2CE913891B78165A008FCCE4 /* ViewController_Login.swift */,
 				2CE913851B781634008FCCE4 /* ViewController_Profile.swift */,
 				2CE913871B781648008FCCE4 /* ViewController_Sync.swift */,
@@ -222,6 +217,19 @@
 				2CD8FD611BA1D78900316ACF /* Merriweather-Regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2CD8FD6A1BA1DF8C00316ACF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8FD411B9E53F300316ACF /* deletebtn.png */,
+				2CD8FD421B9E53F300316ACF /* facebook.png */,
+				2CD8FD431B9E53F300316ACF /* gtherbtn.png */,
+				2CD8FD441B9E53F300316ACF /* twitterbtn.png */,
+				2CD8FD511B9F301E00316ACF /* placeholder.jpg */,
+				2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		2CEC94881B9E3D6000C4F63F /* Products */ = {

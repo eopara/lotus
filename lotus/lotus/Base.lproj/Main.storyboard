@@ -22,6 +22,7 @@
             <string>Merriweather</string>
             <string>Merriweather</string>
             <string>Merriweather</string>
+            <string>Merriweather</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -67,20 +68,20 @@
                                     <constraint firstAttribute="height" constant="45" id="R4U-j4-gpg"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deletebtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="buY-QX-acC" userLabel="deleteBtn_pw">
-                                <rect key="frame" x="548" y="402" width="15" height="15"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="qlg-f5-eRa"/>
-                                    <constraint firstAttribute="height" constant="15" id="xgi-GG-gXT"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deletebtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="hO0-ZA-UIU" userLabel="deleteBtn_em">
                                 <rect key="frame" x="548" y="358" width="15" height="15"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="4Ee-QJ-MBv"/>
                                     <constraint firstAttribute="height" constant="15" id="QRT-F1-SdT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deletebtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="buY-QX-acC" userLabel="deleteBtn_pw">
+                                <rect key="frame" x="548" y="402" width="15" height="15"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="qlg-f5-eRa"/>
+                                    <constraint firstAttribute="height" constant="15" id="xgi-GG-gXT"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suL-VE-0Ge" userLabel="Email">
@@ -102,16 +103,32 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-qO-09O">
-                                <rect key="frame" x="32" y="353" width="531" height="86"/>
+                                <rect key="frame" x="32" y="353" width="531" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-EP-7sH">
+                                        <rect key="frame" x="0.0" y="84" width="117" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="vIx-IV-h2D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="10"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ore-EP-7sH" firstAttribute="leading" secondItem="Zdp-qO-09O" secondAttribute="leading" id="Hio-H7-vpt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ore-EP-7sH" secondAttribute="bottom" id="LNh-5O-iyg"/>
+                                    <constraint firstItem="Ore-EP-7sH" firstAttribute="top" secondItem="Zdp-qO-09O" secondAttribute="top" constant="84" id="jfp-zP-tZ6"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-7w-C26" userLabel="Login">
-                                <rect key="frame" x="79" y="479" width="90" height="90"/>
+                                <rect key="frame" x="79" y="480" width="85" height="85"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="0Ot-8O-Uri"/>
-                                    <constraint firstAttribute="height" constant="90" id="Fo0-kG-3Du"/>
+                                    <constraint firstAttribute="width" constant="85" id="0Ot-8O-Uri"/>
+                                    <constraint firstAttribute="height" constant="85" id="Fo0-kG-3Du"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="16"/>
                                 <state key="normal" title="Login">
@@ -120,17 +137,17 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="45"/>
+                                        <real key="value" value="42.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-Wc-POO" userLabel="Signup">
-                                <rect key="frame" x="214" y="479" width="90" height="91"/>
+                                <rect key="frame" x="214" y="480" width="85" height="84"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="xJ5-Kb-E2c"/>
+                                    <constraint firstAttribute="width" constant="85" id="xJ5-Kb-E2c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
@@ -139,7 +156,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="45"/>
+                                        <real key="value" value="42.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -153,16 +170,16 @@
                             <constraint firstItem="bNH-6z-EkE" firstAttribute="top" secondItem="hO0-ZA-UIU" secondAttribute="bottom" constant="24" id="DPc-qY-C21"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="leading" secondItem="hO0-ZA-UIU" secondAttribute="leading" id="Gkq-yH-pdu"/>
                             <constraint firstItem="Zdp-qO-09O" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="top" id="HfE-4O-Yfk"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dxG-Wc-POO" secondAttribute="bottom" constant="30" id="IV8-Cf-kpc"/>
-                            <constraint firstItem="dxG-Wc-POO" firstAttribute="baseline" secondItem="LYa-7w-C26" secondAttribute="firstBaseline" id="MDm-ja-mua"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dxG-Wc-POO" secondAttribute="bottom" constant="36" id="IV8-Cf-kpc"/>
+                            <constraint firstItem="dxG-Wc-POO" firstAttribute="baseline" secondItem="LYa-7w-C26" secondAttribute="firstBaseline" constant="-1" id="MDm-ja-mua"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="217" id="NSg-Gi-Zzu"/>
                             <constraint firstItem="JN5-uR-cnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="QBR-XK-9ei"/>
-                            <constraint firstAttribute="bottom" secondItem="Zdp-qO-09O" secondAttribute="bottom" constant="161" id="RR5-hH-Pj6"/>
+                            <constraint firstAttribute="bottom" secondItem="Zdp-qO-09O" secondAttribute="bottom" constant="142" id="RR5-hH-Pj6"/>
                             <constraint firstItem="C9p-7b-Czg" firstAttribute="top" secondItem="sSk-AL-wz1" secondAttribute="top" id="Rce-f4-sMu"/>
-                            <constraint firstItem="Zdp-qO-09O" firstAttribute="bottom" secondItem="bNH-6z-EkE" secondAttribute="bottom" constant="12" id="Tui-Ah-kxt"/>
+                            <constraint firstItem="Zdp-qO-09O" firstAttribute="bottom" secondItem="bNH-6z-EkE" secondAttribute="bottom" constant="31" id="Tui-Ah-kxt"/>
                             <constraint firstItem="hO0-ZA-UIU" firstAttribute="trailing" secondItem="suL-VE-0Ge" secondAttribute="trailing" constant="-5" id="XIa-Fe-2sB"/>
                             <constraint firstItem="bNH-6z-EkE" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="14" id="XPp-bA-ET0"/>
-                            <constraint firstItem="LYa-7w-C26" firstAttribute="baseline" secondItem="dxG-Wc-POO" secondAttribute="firstBaseline" id="ZAR-pH-34r"/>
+                            <constraint firstItem="LYa-7w-C26" firstAttribute="baseline" secondItem="dxG-Wc-POO" secondAttribute="firstBaseline" constant="1" id="ZAR-pH-34r"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="19" id="ZDr-9A-oTJ"/>
                             <constraint firstItem="buY-QX-acC" firstAttribute="centerY" secondItem="bNH-6z-EkE" secondAttribute="centerY" constant="-2.5" id="ZV7-K7-3jy"/>
                             <constraint firstItem="Zdp-qO-09O" firstAttribute="trailing" secondItem="suL-VE-0Ge" secondAttribute="trailing" constant="-5" id="bkS-l6-Fxk"/>
@@ -176,7 +193,7 @@
                             <constraint firstItem="LYa-7w-C26" firstAttribute="top" secondItem="dxG-Wc-POO" secondAttribute="top" id="lsf-e1-ibg"/>
                             <constraint firstItem="C9p-7b-Czg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="114" id="mVU-Pu-8Zf"/>
                             <constraint firstItem="suL-VE-0Ge" firstAttribute="centerX" secondItem="JN5-uR-cnT" secondAttribute="centerX" id="pCA-Y8-9Xx"/>
-                            <constraint firstItem="LYa-7w-C26" firstAttribute="leading" secondItem="dxG-Wc-POO" secondAttribute="trailing" constant="-225" id="uk0-h4-VF9"/>
+                            <constraint firstItem="LYa-7w-C26" firstAttribute="leading" secondItem="dxG-Wc-POO" secondAttribute="trailing" constant="-220" id="uk0-h4-VF9"/>
                             <constraint firstItem="suL-VE-0Ge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="zWg-XB-mVq"/>
                         </constraints>
                         <variation key="default">

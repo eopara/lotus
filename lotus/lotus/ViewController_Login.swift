@@ -14,6 +14,8 @@ let IMAGE_GTHER_TAG = 3
 let IMAGE_FB_TAG = 4
 let IMAGE_TWITTER_TAG = 5
 
+var storedConstraint: CGFloat!
+
 
 
 var user: User?
@@ -53,6 +55,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         viewContainer.hidden = true
         loginBtn.hidden = true
         signBtn.hidden = true
+        storedConstraint = bottomViewConstraint.constant
         
         //keyboard notification
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
@@ -62,6 +65,18 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         let tapGther = UITapGestureRecognizer(target: self, action: Selector("tappedG"))
         let tapFb = UITapGestureRecognizer(target: self, action: Selector("tappedF"))
         let tapTwitter = UITapGestureRecognizer(target: self, action: Selector("tappedT"))
+        
+        let tapDeleteEmail = UITapGestureRecognizer(target: self, action: Selector("tappedClearEmail"))
+        let tapDeletePw = UITapGestureRecognizer(target: self, action: Selector("tappedClearPw"))
+        
+        
+        emailClear.addGestureRecognizer(tapDeleteEmail)
+        emailClear.userInteractionEnabled = true
+        
+        pwClear.addGestureRecognizer(tapDeletePw)
+        pwClear.userInteractionEnabled = true
+        
+    
         
         gtherBtn.addGestureRecognizer(tapGther)
         gtherBtn.userInteractionEnabled = true
@@ -122,7 +137,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.bottomViewConstraint.constant = keyboardFrame.size.height + 30
+            self.bottomViewConstraint.constant = keyboardFrame.size.height + 15
         })
     }
     
@@ -131,7 +146,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.bottomViewConstraint.constant = 173
+            self.bottomViewConstraint.constant = storedConstraint
         })
     }
     
@@ -226,6 +241,14 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         else {
             Twitter.login()
         }
+    }
+    
+    func tappedClearEmail() {
+        
+    }
+    
+    func tappedClearPw() {
+        
     }
 
     
