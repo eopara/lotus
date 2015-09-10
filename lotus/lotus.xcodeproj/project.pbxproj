@@ -18,6 +18,14 @@
 		2CD8FD481B9E53F300316ACF /* twitterbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD441B9E53F300316ACF /* twitterbtn.png */; };
 		2CD8FD521B9F301E00316ACF /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD511B9F301E00316ACF /* placeholder.jpg */; };
 		2CD8FD571B9F3E7C00316ACF /* gtherbtn_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */; };
+		2CD8FD621BA1D78900316ACF /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD5A1BA1D78900316ACF /* Merriweather-Black.ttf */; };
+		2CD8FD631BA1D78900316ACF /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD5B1BA1D78900316ACF /* Merriweather-Bold.ttf */; };
+		2CD8FD641BA1D78900316ACF /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD5C1BA1D78900316ACF /* Merriweather-BoldItalic.ttf */; };
+		2CD8FD651BA1D78900316ACF /* Merriweather-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD5D1BA1D78900316ACF /* Merriweather-HeavyItalic.ttf */; };
+		2CD8FD661BA1D78900316ACF /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD5E1BA1D78900316ACF /* Merriweather-Italic.ttf */; };
+		2CD8FD671BA1D78900316ACF /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD5F1BA1D78900316ACF /* Merriweather-Light.ttf */; };
+		2CD8FD681BA1D78900316ACF /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD601BA1D78900316ACF /* Merriweather-LightItalic.ttf */; };
+		2CD8FD691BA1D78900316ACF /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD611BA1D78900316ACF /* Merriweather-Regular.ttf */; };
 		2CE913861B781634008FCCE4 /* ViewController_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913851B781634008FCCE4 /* ViewController_Profile.swift */; };
 		2CE913881B781648008FCCE4 /* ViewController_Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913871B781648008FCCE4 /* ViewController_Sync.swift */; };
 		2CE9138A1B78165A008FCCE4 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE913891B78165A008FCCE4 /* ViewController_Login.swift */; };
@@ -89,6 +97,14 @@
 		2CD8FD441B9E53F300316ACF /* twitterbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitterbtn.png; path = ../../../../Desktop/twitterbtn.png; sourceTree = "<group>"; };
 		2CD8FD511B9F301E00316ACF /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = ../../../../Downloads/placeholder.jpg; sourceTree = "<group>"; };
 		2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gtherbtn_white.png; path = ../../../../Desktop/gtherbtn_white.png; sourceTree = "<group>"; };
+		2CD8FD5A1BA1D78900316ACF /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Black.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		2CD8FD5B1BA1D78900316ACF /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Bold.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
+		2CD8FD5C1BA1D78900316ACF /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-BoldItalic.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2CD8FD5D1BA1D78900316ACF /* Merriweather-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-HeavyItalic.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		2CD8FD5E1BA1D78900316ACF /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Italic.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-Italic.ttf"; sourceTree = "<group>"; };
+		2CD8FD5F1BA1D78900316ACF /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Light.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-Light.ttf"; sourceTree = "<group>"; };
+		2CD8FD601BA1D78900316ACF /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-LightItalic.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
+		2CD8FD611BA1D78900316ACF /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "../../../../Downloads/Merriweather/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		2CE913851B781634008FCCE4 /* ViewController_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Profile.swift; sourceTree = "<group>"; };
 		2CE913871B781648008FCCE4 /* ViewController_Sync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Sync.swift; sourceTree = "<group>"; };
 		2CE913891B78165A008FCCE4 /* ViewController_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
@@ -143,6 +159,7 @@
 		2CA3BA331B77ECF300E04DCC /* lotus */ = {
 			isa = PBXGroup;
 			children = (
+				2CD8FD591BA1D77700316ACF /* Fonts */,
 				5EEE1AFB1B8D5AA80080B52B /* FBSDKCoreKit.framework */,
 				5EEE1AFC1B8D5AA80080B52B /* FBSDKLoginKit.framework */,
 				5EEE1AFF1B8D5B810080B52B /* FBBridgingHeader.h */,
@@ -158,9 +175,9 @@
 				2CD8FD441B9E53F300316ACF /* twitterbtn.png */,
 				2CD8FD511B9F301E00316ACF /* placeholder.jpg */,
 				2CD8FD561B9F3E7C00316ACF /* gtherbtn_white.png */,
+				2CE913891B78165A008FCCE4 /* ViewController_Login.swift */,
 				2CE913851B781634008FCCE4 /* ViewController_Profile.swift */,
 				2CE913871B781648008FCCE4 /* ViewController_Sync.swift */,
-				2CE913891B78165A008FCCE4 /* ViewController_Login.swift */,
 				2CE9138B1B781FDD008FCCE4 /* global.swift */,
 				5EE1DD291B8C0FF00075A6B9 /* User.swift */,
 			);
@@ -190,6 +207,21 @@
 				2CA3BA4B1B77ECF400E04DCC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CD8FD591BA1D77700316ACF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8FD5A1BA1D78900316ACF /* Merriweather-Black.ttf */,
+				2CD8FD5B1BA1D78900316ACF /* Merriweather-Bold.ttf */,
+				2CD8FD5C1BA1D78900316ACF /* Merriweather-BoldItalic.ttf */,
+				2CD8FD5D1BA1D78900316ACF /* Merriweather-HeavyItalic.ttf */,
+				2CD8FD5E1BA1D78900316ACF /* Merriweather-Italic.ttf */,
+				2CD8FD5F1BA1D78900316ACF /* Merriweather-Light.ttf */,
+				2CD8FD601BA1D78900316ACF /* Merriweather-LightItalic.ttf */,
+				2CD8FD611BA1D78900316ACF /* Merriweather-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		2CEC94881B9E3D6000C4F63F /* Products */ = {
@@ -321,14 +353,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD8FD481B9E53F300316ACF /* twitterbtn.png in Resources */,
+				2CD8FD621BA1D78900316ACF /* Merriweather-Black.ttf in Resources */,
+				2CD8FD681BA1D78900316ACF /* Merriweather-LightItalic.ttf in Resources */,
 				2CD8FD461B9E53F300316ACF /* facebook.png in Resources */,
 				2CD8FD451B9E53F300316ACF /* deletebtn.png in Resources */,
 				2CFA3B821B9E2D6E005AC96A /* Main.storyboard in Resources */,
 				2CD8FD471B9E53F300316ACF /* gtherbtn.png in Resources */,
 				2CA3BA411B77ECF300E04DCC /* LaunchScreen.xib in Resources */,
+				2CD8FD651BA1D78900316ACF /* Merriweather-HeavyItalic.ttf in Resources */,
+				2CD8FD691BA1D78900316ACF /* Merriweather-Regular.ttf in Resources */,
 				2CA3BA3E1B77ECF300E04DCC /* Images.xcassets in Resources */,
+				2CD8FD671BA1D78900316ACF /* Merriweather-Light.ttf in Resources */,
 				2CD8FD571B9F3E7C00316ACF /* gtherbtn_white.png in Resources */,
 				2CD8FD521B9F301E00316ACF /* placeholder.jpg in Resources */,
+				2CD8FD661BA1D78900316ACF /* Merriweather-Italic.ttf in Resources */,
+				2CD8FD641BA1D78900316ACF /* Merriweather-BoldItalic.ttf in Resources */,
+				2CD8FD631BA1D78900316ACF /* Merriweather-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

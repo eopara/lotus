@@ -26,6 +26,10 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     @IBOutlet weak var pwField: UITextField!
     @IBOutlet weak var emailClear: UIImageView!
     @IBOutlet weak var pwClear: UIImageView!
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var signBtn: UIButton!
+    
+    
     
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
@@ -38,12 +42,17 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         //load background
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "placeholder.jpg")!.alpha(0.5))
         
+        //loginBtn.titleLabel!.font =  UIFont(name: "Merriweather", size: 15)
+        //ignBtn.titleLabel!.font =  UIFont(name: "Merriweater", size: 15)
+        
         //add textfield elements to the gther login subview
         viewContainer.addSubview(emailField)
         viewContainer.addSubview(pwField)
         viewContainer.addSubview(emailClear)
         viewContainer.addSubview(pwClear)
         viewContainer.hidden = true
+        loginBtn.hidden = true
+        signBtn.hidden = true
         
         //keyboard notification
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
@@ -163,13 +172,18 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         gtherBtn.image = UIImage(named: "gtherbtn_white.png")
         
         viewContainer.hidden = false
+        loginBtn.hidden = false
+        signBtn.hidden = false
     }
     
     func tappedF() {
         //custom login button for facebook
         //hide gther login field
         gtherBtn.image = UIImage(named: "gtherbtn.png")
-        viewContainer.hidden = false
+        viewContainer.hidden = true
+        loginBtn.hidden = true
+        signBtn.hidden = true
+
         
         var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
@@ -201,10 +215,10 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         println("t")
         //hide gther login field
         gtherBtn.image = UIImage(named: "gtherbtn.png")
-        emailField.hidden = true
-        pwField.hidden = true
-        emailClear.hidden = true
-        pwClear.hidden = true
+        viewContainer.hidden = true
+        loginBtn.hidden = true
+        signBtn.hidden = true
+       
         
         if(User.isLoggedIn().status) {//TEMP: won't need logout function on this page
             Twitter.logout()
