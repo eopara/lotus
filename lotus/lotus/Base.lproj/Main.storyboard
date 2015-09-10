@@ -102,26 +102,6 @@
                                 <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-qO-09O">
-                                <rect key="frame" x="32" y="353" width="531" height="105"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-EP-7sH">
-                                        <rect key="frame" x="0.0" y="84" width="117" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="117" id="vIx-IV-h2D"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="10"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Ore-EP-7sH" firstAttribute="leading" secondItem="Zdp-qO-09O" secondAttribute="leading" id="Hio-H7-vpt"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ore-EP-7sH" secondAttribute="bottom" id="LNh-5O-iyg"/>
-                                    <constraint firstItem="Ore-EP-7sH" firstAttribute="top" secondItem="Zdp-qO-09O" secondAttribute="top" constant="84" id="jfp-zP-tZ6"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-7w-C26" userLabel="Login">
                                 <rect key="frame" x="79" y="480" width="85" height="85"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -161,6 +141,26 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-qO-09O">
+                                <rect key="frame" x="32" y="353" width="531" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-EP-7sH">
+                                        <rect key="frame" x="0.0" y="84" width="117" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="vIx-IV-h2D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="10"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ore-EP-7sH" firstAttribute="leading" secondItem="Zdp-qO-09O" secondAttribute="leading" id="Hio-H7-vpt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ore-EP-7sH" secondAttribute="bottom" id="LNh-5O-iyg"/>
+                                    <constraint firstItem="Ore-EP-7sH" firstAttribute="top" secondItem="Zdp-qO-09O" secondAttribute="top" constant="84" id="jfp-zP-tZ6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -207,6 +207,7 @@
                         <outlet property="emailClear" destination="hO0-ZA-UIU" id="tSH-9Q-SGX"/>
                         <outlet property="emailField" destination="suL-VE-0Ge" id="TeR-T8-ZIB"/>
                         <outlet property="fbBtn" destination="C9p-7b-Czg" id="PSJ-xZ-hA9"/>
+                        <outlet property="forgotPw" destination="Ore-EP-7sH" id="sww-Lm-7E4"/>
                         <outlet property="gtherBtn" destination="JN5-uR-cnT" id="Y2S-15-FhI"/>
                         <outlet property="loginBtn" destination="LYa-7w-C26" id="DLL-HM-SGL"/>
                         <outlet property="pwClear" destination="buY-QX-acC" id="hEv-qf-I4x"/>

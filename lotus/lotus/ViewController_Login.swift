@@ -31,6 +31,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signBtn: UIButton!
     
+    @IBOutlet weak var forgotPw: UILabel!
     
     
     @IBOutlet weak var viewContainer: UIView!
@@ -69,12 +70,17 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         let tapDeleteEmail = UITapGestureRecognizer(target: self, action: Selector("tappedClearEmail"))
         let tapDeletePw = UITapGestureRecognizer(target: self, action: Selector("tappedClearPw"))
         
+        let tapForgotPw = UITapGestureRecognizer(target: self, action: Selector("tappedForgotPw"))
+        
         
         emailClear.addGestureRecognizer(tapDeleteEmail)
         emailClear.userInteractionEnabled = true
         
         pwClear.addGestureRecognizer(tapDeletePw)
         pwClear.userInteractionEnabled = true
+        
+        forgotPw.addGestureRecognizer(tapForgotPw)
+        forgotPw.userInteractionEnabled = true
         
     
         
@@ -244,11 +250,17 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     }
     
     func tappedClearEmail() {
+        emailField.text = ""
         
     }
     
     func tappedClearPw() {
-        
+        pwField.text = ""
+    }
+    
+    func tappedForgotPw() {
+        //do a bunch of shit jacoby you put the forgot password functionalilty in here 
+        println("you forgot your password")
     }
 
     
