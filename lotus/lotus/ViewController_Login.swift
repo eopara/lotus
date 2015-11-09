@@ -14,7 +14,9 @@ let IMAGE_GTHER_TAG = 3
 let IMAGE_FB_TAG = 4
 let IMAGE_TWITTER_TAG = 5
 
-var storedConstraint: CGFloat!
+var bottomStoredconstraint: CGFloat!
+var topStoredconstraint: CGFloat!
+var rowStoredconstraint: CGFloat!
 
 
 
@@ -36,8 +38,8 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var bottomViewConstraint: NSLayoutConstraint!
-    
-   
+    @IBOutlet weak var topLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var secondRowConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +52,16 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         
         //add textfield elements to the gther login subview
         viewContainer.addSubview(emailField)
+        
         viewContainer.addSubview(pwField)
         viewContainer.addSubview(emailClear)
         viewContainer.addSubview(pwClear)
         viewContainer.hidden = true
         loginBtn.hidden = true
         signBtn.hidden = true
-        storedConstraint = bottomViewConstraint.constant
+        bottomStoredconstraint = bottomViewConstraint.constant
+        topStoredconstraint = topLayoutConstraint.constant
+        rowStoredconstraint = secondRowConstraint.constant
         
         //keyboard notification
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
@@ -101,8 +106,8 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         pwField.tag = LOGIN_PW_TAG
         
         //style text fields
-        styleTextField(emailField, 1.5, UIColor.whiteColor().CGColor, "Email")
-        styleTextField(pwField, 1.5, UIColor.whiteColor().CGColor, "Password")
+        styleTextField(emailField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Email")
+        styleTextField(pwField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Password")
         
         
         //set the delagate to the view controller
@@ -113,7 +118,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         self.emailField.nextField = self.pwField
         
         //dismiss keyboard
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
         // Do any additional setup after loading the view.
@@ -124,7 +129,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         if(User.isLoggedIn().status) {
             user = User()
             //Skip login screen
-            println("already logged in")
+            print("already logged in")
         }
     }
 
@@ -140,19 +145,23 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     
     func keyboardNotification(notification: NSNotification) {
         var info = notification.userInfo!
-        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.bottomViewConstraint.constant = keyboardFrame.size.height + 15
+            self.topLayoutConstraint.constant = self.topLayoutConstraint.constant - 200
+            self.secondRowConstraint.constant = self.secondRowConstraint.constant - 200
         })
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        var info = notification.userInfo!
-        var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        _ = notification.userInfo!
+        //var keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
-            self.bottomViewConstraint.constant = storedConstraint
+            self.bottomViewConstraint.constant = bottomStoredconstraint
+            self.topLayoutConstraint.constant = topStoredconstraint
+            self.secondRowConstraint.constant = rowStoredconstraint
         })
     }
     
@@ -172,11 +181,11 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if ((error) != nil) {
             // Process error
-            println("Error: \(error)")
+            print("Error: \(error)")
         }
         else if result.isCancelled {
             // Handle cancellations
-            println("Cancelled")
+            print("Cancelled")
         }
         else {
             Facebook.login()
@@ -206,10 +215,10 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         signBtn.hidden = true
 
         
-        var fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
             if (error == nil){
-                var fbloginresult : FBSDKLoginManagerLoginResult = result
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
                 if(fbloginresult.grantedPermissions.contains("email"))
                 {
                     self.getFBUserData()
@@ -225,7 +234,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                    println(result)
+                    print(result)
                 }
             })
         }
@@ -233,7 +242,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     
     
     func tappedT() {
-        println("t")
+        print("t")
         //hide gther login field
         gtherBtn.image = UIImage(named: "gtherbtn.png")
         viewContainer.hidden = true
@@ -260,7 +269,7 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
     
     func tappedForgotPw() {
         //do a bunch of shit jacoby you put the forgot password functionalilty in here 
-        println("you forgot your password")
+        print("you forgot your password")
     }
 
     

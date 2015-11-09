@@ -49,13 +49,13 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         
         
         //style text fields
-        styleTextField(fnTextField, 1.5, UIColor.whiteColor().CGColor, "First Name")
-        styleTextField(lnTextField, 1.5, UIColor.whiteColor().CGColor, "Last Name")
-        styleTextField(zipTextField, 1.5, UIColor.whiteColor().CGColor, "Zip")
-        styleTextField(dayTextField, 1.5, UIColor.whiteColor().CGColor, "Day")
-        styleTextField(monthTextField, 1.5, UIColor.whiteColor().CGColor, "Month")
-        styleTextField(yearTextField, 1.5, UIColor.whiteColor().CGColor, "Year")
-        styleTextField(emailTextField, 1.5, UIColor.whiteColor().CGColor, "Email")
+        styleTextField(fnTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "First Name")
+        styleTextField(lnTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Last Name")
+        styleTextField(zipTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Zip")
+        styleTextField(dayTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Day")
+        styleTextField(monthTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Month")
+        styleTextField(yearTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Year")
+        styleTextField(emailTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Email")
         
         
         //set delagates to the view controller
@@ -90,7 +90,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         buttonNext.enabled = false
         
         
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
         
@@ -160,12 +160,12 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         let text = textField.text ?? ""
-        let decimalSeparator = NSLocale.currentLocale().objectForKey(NSLocaleDecimalSeparator) as! String
+        _ = NSLocale.currentLocale().objectForKey(NSLocaleDecimalSeparator) as! String
         let testText = (text as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
         
         if(textField.tag == FIELD_ZIP_TAG) {
-            let newLength = count(text.utf16) + count(string.utf16) - range.length
+            _ = text.utf16.count + string.utf16.count - range.length
             return isNumeric(testText)
         }
         

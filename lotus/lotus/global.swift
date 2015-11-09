@@ -38,30 +38,30 @@ func styleTextField(textField: UITextField, borderWidth: CGFloat, borderColor: C
 //can return date data in dd mmm yyyy formating
 func getDayFromDate(date: NSDate) -> String {
     //returns day from dd mmm yyyy NSDate formatting
-    var dateFormatter = NSDateFormatter()
+    let dateFormatter = NSDateFormatter()
     
     dateFormatter.dateFormat = "dd MMM yyyy"
     
-    var dateStr = dateFormatter.stringFromDate(date)
-    let idx = advance(dateStr.startIndex, 2)
+    let dateStr = dateFormatter.stringFromDate(date)
+    let idx = dateStr.startIndex.advancedBy(2)
     
     return dateStr.substringToIndex(idx)
 }
 
 func getMonthFromDate(date: NSDate) -> String {
     //returns month from dd mmm yyyy NSDate formatting
-    var dateFormatter = NSDateFormatter()
+    let dateFormatter = NSDateFormatter()
     
     dateFormatter.dateFormat = "dd MMM yyyy"
     
-    var dateStr = dateFormatter.stringFromDate(date)
+    let dateStr = dateFormatter.stringFromDate(date)
     
-    let idx = advance(dateStr.startIndex, 2)
+    let idx = dateStr.startIndex.advancedBy(2)
     
-    let idxM = advance(dateStr.endIndex, -4)
+    let idxM = dateStr.endIndex.advancedBy(-4)
     
-    var day = dateStr.substringToIndex(idx)
-    var year = dateStr.substringFromIndex(idxM)
+    let day = dateStr.substringToIndex(idx)
+    let year = dateStr.substringFromIndex(idxM)
     var month = dateStr.stringByReplacingOccurrencesOfString(day, withString: "")
     month = month.stringByReplacingOccurrencesOfString(year, withString: "")
     
@@ -73,19 +73,19 @@ func getMonthFromDate(date: NSDate) -> String {
 
 func getYearFromDate(date: NSDate) -> String {
     //returns year from dd mmm yyyy NSDate formatting
-    var dateFormatter = NSDateFormatter()
+    let dateFormatter = NSDateFormatter()
     
     dateFormatter.dateFormat = "dd MMM yyyy"
     
-    var dateStr = dateFormatter.stringFromDate(date)
-    let idx = advance(dateStr.endIndex, -4)
+    let dateStr = dateFormatter.stringFromDate(date)
+    let idx = dateStr.endIndex.advancedBy(-4)
     
     return dateStr.substringFromIndex(idx)
     
 }
 
 func isNumeric(a: String) -> Bool {
-    return a.toInt() != nil
+    return Int(a) != nil
 }
 
 
@@ -120,16 +120,16 @@ extension UIImage {
     {
         UIGraphicsBeginImageContextWithOptions(self.size, false, 0.0)
         
-        var ctx = UIGraphicsGetCurrentContext();
+        let ctx = UIGraphicsGetCurrentContext();
         let area = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height);
         
         CGContextScaleCTM(ctx, 1, -1);
         CGContextTranslateCTM(ctx, 0, -area.size.height);
-        CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
+        CGContextSetBlendMode(ctx, CGBlendMode.Multiply);
         CGContextSetAlpha(ctx, value);
         CGContextDrawImage(ctx, area, self.CGImage);
         
-        var newImage = UIGraphicsGetImageFromCurrentImageContext();
+        let newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
         return newImage;
@@ -146,7 +146,7 @@ extension UITextField {
             return objc_getAssociatedObject(self, &kAssociationKeyNextField) as? UITextField
         }
         set(newField) {
-            objc_setAssociatedObject(self, &kAssociationKeyNextField, newField, UInt(OBJC_ASSOCIATION_RETAIN))
+            objc_setAssociatedObject(self, &kAssociationKeyNextField, newField, (objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN))
         }
     }
 }

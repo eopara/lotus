@@ -32,7 +32,7 @@ class User {
     
     init() {
         identifier = User.getUserIdentifier()
-        println(identifier)
+        print(identifier)
     }
     
     /*****************************************
@@ -85,13 +85,13 @@ class Facebook : Account {
     
     static func login() {
         //Handled by Facebook login button: handle any post-login stuff here
-        println("Facebook logged in")
+        print("Facebook logged in")
         storeUserInfo()
     }
     
     static func logout() {
         //Handled by Facebook login button: handle any post-logout stuff here
-        println("Facebook logged out")
+        print("Facebook logged out")
         removeUserInfo()
     }
     
@@ -105,7 +105,7 @@ class Facebook : Account {
             if ((error) != nil)
             {
                 // Process error
-                println("Error: \(error)")
+                print("Error: \(error)")
             }
             else
             {
@@ -116,10 +116,10 @@ class Facebook : Account {
     }
     
     static func removeUserInfo() {
-        println(prefs.stringForKey("identifier"))
+        print(prefs.stringForKey("identifier"))
         prefs.removeObjectForKey("identifier")
         prefs.removeObjectForKey("name")
-        println(prefs.stringForKey("identifier"))
+        print(prefs.stringForKey("identifier"))
     }
     
     /*****************************************
@@ -149,9 +149,8 @@ class Twitter : Account {
                 prefs.setValue(auth_token, forKey: "auth_token")
                 prefs.setValue(auth_token_secret, forKey: "auth_token_secret")
                 Twitter.storeUserInfo()
-                println("Twitter logged in")
-            }, failure: { (error:NSError!) -> Void in
-                println(error.localizedDescription)
+                print("Twitter logged in")
+            }, failure: { (error:NSError!) -> Void in print(error.localizedDescription)
             }
         )
     }
@@ -159,20 +158,20 @@ class Twitter : Account {
     static func logout() {
         prefs.removeObjectForKey("auth_token")
         prefs.removeObjectForKey("auth_token_secret")
-        println("Twitter logged out")
+        print("Twitter logged out")
     }
     
     static func storeUserInfo() {
-        var parameters =  Dictionary<String, AnyObject>()
+        let parameters =  Dictionary<String, AnyObject>()
         oauthswift.client.get("https://api.twitter.com/1.1/account/verify_credentials.json", parameters: parameters,
             success: {
                 data, response in
-                let jsonDict: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil)
+                let jsonDict: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
                 prefs.setValue(jsonDict["screen_name"]!! as! String, forKey: "identifier")
                 prefs.setValue(jsonDict["name"]!! as! String, forKey: "name")
                 user = User()
             }, failure: {(error:NSError!) -> Void in
-                println(error)
+                print(error)
         })
     }
     
