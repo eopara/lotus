@@ -9,6 +9,7 @@
 import UIKit
 
 var y = 10
+var x = 100
 
 class ViewController: UIViewController {
 
