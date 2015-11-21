@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -41,6 +41,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Jw-ff9">
                                 <rect key="frame" x="16" y="13" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,6 +51,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-7w-C26" userLabel="Login">
                                 <rect key="frame" x="190" y="495" width="85" height="85"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
                                 <constraints>
@@ -70,6 +72,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-Wc-POO" userLabel="Signup">
                                 <rect key="frame" x="325" y="495" width="85" height="84"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
                                 <constraints>
@@ -92,6 +95,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="deletebtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="hO0-ZA-UIU" userLabel="deleteBtn_em">
                                         <rect key="frame" x="528" y="14" width="17" height="17"/>
+                                        <animations/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="17" id="86M-CB-0It">
@@ -101,10 +105,12 @@
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="deletebtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="buY-QX-acC" userLabel="deleteBtn_pw">
                                         <rect key="frame" x="528" y="52" width="17" height="17"/>
+                                        <animations/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-EP-7sH">
                                         <rect key="frame" x="20" y="84" width="117" height="21"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="117" id="H6G-Zt-HMa"/>
                                         </constraints>
@@ -124,12 +130,14 @@
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suL-VE-0Ge" userLabel="Email">
                                         <rect key="frame" x="20" y="8" width="532" height="30"/>
+                                        <animations/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNH-6z-EkE" userLabel="Password">
                                         <rect key="frame" x="20" y="46" width="532" height="30"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Xjh-Xa-2L6"/>
                                         </constraints>
@@ -138,6 +146,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="buY-QX-acC" firstAttribute="top" secondItem="suL-VE-0Ge" secondAttribute="bottom" constant="14" id="1ec-is-jWy"/>
@@ -186,6 +195,7 @@
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gtherbtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="JN5-uR-cnT" userLabel="gtherBtn">
                                 <rect key="frame" x="278" y="188" width="45" height="45"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="QWO-LU-2jX"/>
                                     <constraint firstAttribute="height" constant="45" id="hQs-wp-For"/>
@@ -193,6 +203,7 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="C9p-7b-Czg" userLabel="facebookBtn">
                                 <rect key="frame" x="230" y="241" width="45" height="45"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Z1b-9Z-YOe"/>
                                     <constraint firstAttribute="width" constant="45" id="ifz-7r-jg4"/>
@@ -200,12 +211,14 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterbtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="sSk-AL-wz1" userLabel="twitterBtn">
                                 <rect key="frame" x="325" y="241" width="45" height="45"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="HRa-gv-fYO"/>
                                     <constraint firstAttribute="height" constant="45" id="NPd-BD-4lu"/>
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C9p-7b-Czg" firstAttribute="trailing" secondItem="LYa-7w-C26" secondAttribute="trailing" id="2E2-Cg-ctV"/>
@@ -278,6 +291,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-mm-IHu">
                                 <rect key="frame" x="32" y="312" width="536" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="536" id="IK6-Ar-vzR"/>
                                     <constraint firstAttribute="height" constant="30" id="RJ4-h3-GVe"/>
@@ -288,12 +302,14 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="13b-bx-Kck">
                                 <rect key="frame" x="32" y="206" width="536" height="30"/>
+                                <animations/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Day" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-Ci-CGP">
                                 <rect key="frame" x="32" y="257" width="70" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="EoN-QY-MRS"/>
                                     <constraint firstAttribute="height" constant="30" id="GvT-88-jG3"/>
@@ -308,6 +324,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ed3-0h-FM6">
                                 <rect key="frame" x="136" y="257" width="70" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="4lq-1K-T2A"/>
                                 </constraints>
@@ -322,6 +339,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efd-7n-DLj">
                                 <rect key="frame" x="240" y="257" width="70" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="nbl-fK-dpi"/>
                                 </constraints>
@@ -336,6 +354,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lt-7O-qKe">
                                 <rect key="frame" x="32" y="155" width="536" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="536" id="mMV-IQ-vDo"/>
                                     <constraint firstAttribute="height" constant="30" id="zJg-zr-RxQ"/>
@@ -346,6 +365,7 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="k3p-gv-KMw">
                                 <rect key="frame" x="0.0" y="420" width="600" height="180"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <date key="date" timeIntervalSinceReferenceDate="461009600.73774499">
                                     <!--2015-08-11 18:13:20 +0000-->
@@ -356,6 +376,7 @@
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oe-ag-VRd">
                                 <rect key="frame" x="32" y="104" width="536" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XaY-eB-LRY"/>
                                 </constraints>
@@ -365,6 +386,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDE-BP-wQw">
                                 <rect key="frame" x="265" y="342" width="70" height="70"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
                                 <constraints>
@@ -387,6 +409,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="95U-KN-xOQ" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="188" id="1ZR-8V-03P"/>
@@ -448,6 +471,7 @@
                     <view key="view" contentMode="scaleToFill" id="CBR-fW-k47">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

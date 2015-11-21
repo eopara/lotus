@@ -11,7 +11,6 @@
 		2CA3BA391B77ECF300E04DCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3BA381B77ECF300E04DCC /* ViewController.swift */; };
 		2CA3BA3E1B77ECF300E04DCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BA3D1B77ECF300E04DCC /* Images.xcassets */; };
 		2CA3BA411B77ECF300E04DCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3BA3F1B77ECF300E04DCC /* LaunchScreen.xib */; };
-		2CA3BA4D1B77ECF400E04DCC /* lotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3BA4C1B77ECF400E04DCC /* lotusTests.swift */; };
 		2CD8FD7A1BA1E33400316ACF /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD721BA1E33400316ACF /* Merriweather-Black.ttf */; };
 		2CD8FD7B1BA1E33400316ACF /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD731BA1E33400316ACF /* Merriweather-Bold.ttf */; };
 		2CD8FD7C1BA1E33400316ACF /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8FD741BA1E33400316ACF /* Merriweather-BoldItalic.ttf */; };
@@ -37,13 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2CA3BA471B77ECF400E04DCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CA3BA291B77ECF300E04DCC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CA3BA301B77ECF300E04DCC;
-			remoteInfo = lotus;
-		};
 		2CDF3F981BB1E8DF002BC71A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2CDF3F911BB1E8DF002BC71A /* OAuthSwift.xcodeproj */;
@@ -95,7 +87,6 @@
 		2CA3BA381B77ECF300E04DCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CA3BA3D1B77ECF300E04DCC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CA3BA401B77ECF300E04DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2CA3BA461B77ECF400E04DCC /* lotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3BA4B1B77ECF400E04DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CA3BA4C1B77ECF400E04DCC /* lotusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotusTests.swift; sourceTree = "<group>"; };
 		2CD8FD721BA1E33400316ACF /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
@@ -134,13 +125,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA3BA431B77ECF400E04DCC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -158,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				2CA3BA311B77ECF300E04DCC /* lotus.app */,
-				2CA3BA461B77ECF400E04DCC /* lotusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,24 +264,6 @@
 			productReference = 2CA3BA311B77ECF300E04DCC /* lotus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CA3BA451B77ECF400E04DCC /* lotusTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CA3BA531B77ECF400E04DCC /* Build configuration list for PBXNativeTarget "lotusTests" */;
-			buildPhases = (
-				2CA3BA421B77ECF400E04DCC /* Sources */,
-				2CA3BA431B77ECF400E04DCC /* Frameworks */,
-				2CA3BA441B77ECF400E04DCC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CA3BA481B77ECF400E04DCC /* PBXTargetDependency */,
-			);
-			name = lotusTests;
-			productName = lotusTests;
-			productReference = 2CA3BA461B77ECF400E04DCC /* lotusTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,10 +277,6 @@
 					2CA3BA301B77ECF300E04DCC = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 3WW8KDG6BG;
-					};
-					2CA3BA451B77ECF400E04DCC = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 2CA3BA301B77ECF300E04DCC;
 					};
 				};
 			};
@@ -340,7 +301,6 @@
 			projectRoot = "";
 			targets = (
 				2CA3BA301B77ECF300E04DCC /* lotus */,
-				2CA3BA451B77ECF400E04DCC /* lotusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -401,13 +361,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA3BA441B77ECF400E04DCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -425,22 +378,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA3BA421B77ECF400E04DCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2CA3BA4D1B77ECF400E04DCC /* lotusTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2CA3BA481B77ECF400E04DCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CA3BA301B77ECF300E04DCC /* lotus */;
-			targetProxy = 2CA3BA471B77ECF400E04DCC /* PBXContainerItemProxy */;
-		};
 		2CDF3FA11BB1E8EA002BC71A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OAuthSwift;
@@ -595,42 +535,6 @@
 			};
 			name = Release;
 		};
-		2CA3BA541B77ECF400E04DCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = lotusTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "x.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lotus.app/lotus";
-			};
-			name = Debug;
-		};
-		2CA3BA551B77ECF400E04DCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = lotusTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "x.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lotus.app/lotus";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -648,15 +552,6 @@
 			buildConfigurations = (
 				2CA3BA511B77ECF400E04DCC /* Debug */,
 				2CA3BA521B77ECF400E04DCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CA3BA531B77ECF400E04DCC /* Build configuration list for PBXNativeTarget "lotusTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CA3BA541B77ECF400E04DCC /* Debug */,
-				2CA3BA551B77ECF400E04DCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
