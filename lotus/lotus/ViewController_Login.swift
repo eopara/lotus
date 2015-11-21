@@ -57,12 +57,17 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         viewContainer.addSubview(emailClear)
         viewContainer.addSubview(pwClear)
         viewContainer.hidden = true
+        viewContainer.alpha = 0
         loginBtn.hidden = true
+        loginBtn.alpha = 0
         signBtn.hidden = true
         bottomStoredconstraint = bottomViewConstraint.constant
         topStoredconstraint = topLayoutConstraint.constant
         rowStoredconstraint = secondRowConstraint.constant
+
+        signBtn.alpha = 0
         
+    
         //keyboard notification
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardNotification:", name: UIKeyboardWillChangeFrameNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
@@ -201,15 +206,25 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         
         gtherBtn.image = UIImage(named: "gtherbtn_white.png")
         
+        
         viewContainer.hidden = false
+        viewContainer.fadeIn()
+        
         loginBtn.hidden = false
         signBtn.hidden = false
+        loginBtn.fadeIn()
+        signBtn.fadeIn()
+        
     }
     
     func tappedF() {
         //custom login button for facebook
         //hide gther login field
         gtherBtn.image = UIImage(named: "gtherbtn.png")
+        viewContainer.fadeOut()
+        loginBtn.fadeOut()
+        signBtn.fadeOut()
+        
         viewContainer.hidden = true
         loginBtn.hidden = true
         signBtn.hidden = true
