@@ -76,6 +76,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         self.dayTextField.nextField = self.monthTextField
         self.monthTextField.nextField = self.yearTextField
         self.yearTextField.nextField = self.emailTextField
+        self.emailTextField = self.passwordTextField
         
         
         dayTextField.inputView = UIView(frame: CGRectZero)
