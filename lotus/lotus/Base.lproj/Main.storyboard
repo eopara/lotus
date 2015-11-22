@@ -18,6 +18,7 @@
             <string>Merriweather-Light</string>
             <string>Merriweather-Light</string>
             <string>Merriweather-Light</string>
+            <string>Merriweather-Light</string>
         </mutableArray>
         <mutableArray key="Merriweather-Regular.ttf">
             <string>Merriweather</string>
@@ -45,9 +46,6 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="D3U-Xt-etH" kind="presentation" id="9rb-Bi-Wze"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-7w-C26" userLabel="Login">
                                 <rect key="frame" x="190" y="495" width="85" height="85"/>
@@ -69,26 +67,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-Wc-POO" userLabel="Signup">
-                                <rect key="frame" x="325" y="495" width="85" height="84"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="xJ5-Kb-E2c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <real key="value" value="42.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="6Wc-DV-0OF" kind="showDetail" id="Dd9-zi-Ex1"/>
+                                </connections>
                             </button>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-qO-09O">
                                 <rect key="frame" x="24" y="359" width="552" height="101"/>
@@ -217,6 +198,29 @@
                                     <constraint firstAttribute="height" constant="45" id="NPd-BD-4lu"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-Wc-POO" userLabel="Signup">
+                                <rect key="frame" x="325" y="495" width="85" height="84"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.89999999999999991" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="xJ5-Kb-E2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="42.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="D3U-Xt-etH" kind="showDetail" action="showViewController:sender:" id="wzm-n5-QF3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -285,7 +289,7 @@
                         <viewControllerLayoutGuide type="top" id="HaE-wX-09w"/>
                         <viewControllerLayoutGuide type="bottom" id="95U-KN-xOQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2uT-MB-eeZ">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="2uT-MB-eeZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -405,17 +409,43 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="6Wc-DV-0OF" kind="presentation" id="WcS-dK-MtI"/>
+                                    <segue destination="6Wc-DV-0OF" kind="showDetail" id="WcS-dK-MtI"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2J-WA-pKH" userLabel="Password Text Field">
+                                <rect key="frame" x="32" y="312" width="536" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Qf-XX-5lb"/>
+                                    <constraint firstAttribute="width" constant="536" id="OfZ-dX-kvW"/>
+                                    <constraint firstAttribute="height" constant="30" id="nmK-qg-BQj"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Qf-XX-5lb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="0Qf-XX-5lb"/>
+                                        <exclude reference="OfZ-dX-kvW"/>
+                                        <exclude reference="nmK-qg-BQj"/>
+                                    </mask>
+                                </variation>
+                            </textField>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="95U-KN-xOQ" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="188" id="1ZR-8V-03P"/>
                             <constraint firstItem="2lt-7O-qKe" firstAttribute="height" secondItem="13b-bx-Kck" secondAttribute="height" id="1fk-MX-FwI"/>
+                            <constraint firstItem="K2J-WA-pKH" firstAttribute="leading" secondItem="m0q-mm-IHu" secondAttribute="leading" id="3u8-dG-BXi"/>
                             <constraint firstItem="m0q-mm-IHu" firstAttribute="top" secondItem="yxe-Ci-CGP" secondAttribute="bottom" constant="25" id="Agr-Kw-yVb"/>
                             <constraint firstItem="95U-KN-xOQ" firstAttribute="top" secondItem="k3p-gv-KMw" secondAttribute="bottom" id="Bvw-0g-EMZ"/>
+                            <constraint firstItem="K2J-WA-pKH" firstAttribute="trailing" secondItem="m0q-mm-IHu" secondAttribute="trailing" id="C19-Xp-yWK"/>
                             <constraint firstItem="ed3-0h-FM6" firstAttribute="bottom" secondItem="yxe-Ci-CGP" secondAttribute="bottom" id="Cgb-49-NPZ"/>
                             <constraint firstAttribute="trailing" secondItem="m0q-mm-IHu" secondAttribute="trailing" constant="32" id="DOw-fj-RQJ"/>
                             <constraint firstItem="13b-bx-Kck" firstAttribute="top" secondItem="2lt-7O-qKe" secondAttribute="bottom" constant="21" id="DsW-gF-dqj"/>
@@ -441,8 +471,29 @@
                             <constraint firstItem="k3p-gv-KMw" firstAttribute="centerX" secondItem="SDE-BP-wQw" secondAttribute="centerX" id="srT-RW-q8m"/>
                             <constraint firstItem="k3p-gv-KMw" firstAttribute="top" secondItem="SDE-BP-wQw" secondAttribute="bottom" constant="8" id="tIt-6g-rMu"/>
                             <constraint firstItem="yxe-Ci-CGP" firstAttribute="top" secondItem="efd-7n-DLj" secondAttribute="top" id="z1n-ji-2mN"/>
+                            <constraint firstItem="K2J-WA-pKH" firstAttribute="top" secondItem="m0q-mm-IHu" secondAttribute="bottom" constant="14" id="z7i-hK-OCw"/>
                             <constraint firstItem="k3p-gv-KMw" firstAttribute="leading" secondItem="2uT-MB-eeZ" secondAttribute="leading" id="zta-vD-QMb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="K2J-WA-pKH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3u8-dG-BXi"/>
+                                <exclude reference="C19-Xp-yWK"/>
+                                <exclude reference="z7i-hK-OCw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="K2J-WA-pKH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3u8-dG-BXi"/>
+                                <include reference="C19-Xp-yWK"/>
+                                <include reference="z7i-hK-OCw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="buttonNext" destination="SDE-BP-wQw" id="lNo-Q0-ewh"/>
@@ -452,6 +503,7 @@
                         <outlet property="fnTextField" destination="4oe-ag-VRd" id="AoJ-zq-mxf"/>
                         <outlet property="lnTextField" destination="2lt-7O-qKe" id="GKJ-pZ-MyJ"/>
                         <outlet property="monthTextField" destination="ed3-0h-FM6" id="Zdm-wD-Zh7"/>
+                        <outlet property="passwordTextField" destination="K2J-WA-pKH" id="Z32-xY-53n"/>
                         <outlet property="yearTextField" destination="efd-7n-DLj" id="QtI-mQ-0XW"/>
                         <outlet property="zipTextField" destination="13b-bx-Kck" id="sxB-bf-ktJ"/>
                     </connections>
@@ -477,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvg-47-5Q3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1603" y="438.99999999999994"/>
+            <point key="canvasLocation" x="1760" y="277.5"/>
         </scene>
     </scenes>
     <resources>
@@ -486,4 +538,7 @@
         <image name="gtherbtn.png" width="473" height="473"/>
         <image name="twitterbtn.png" width="474" height="473"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WcS-dK-MtI"/>
+    </inferredMetricsTieBreakers>
 </document>

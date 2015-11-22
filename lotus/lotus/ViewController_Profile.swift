@@ -29,6 +29,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var monthTextField: UITextField!
     @IBOutlet weak var yearTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -36,7 +37,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "placeholder.jpg")!.alpha(0.5))
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "placeholder.jpg")!.alpha(0.5))
         
         //set tags for TextViewDelegate
         fnTextField.tag = FIELD_FN_TAG
@@ -56,6 +57,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         styleTextField(monthTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Month")
         styleTextField(yearTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Year")
         styleTextField(emailTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Email")
+        styleTextField(passwordTextField, borderWidth: 1.5, borderColor: UIColor.whiteColor().CGColor, placeHolderText: "Password")
         
         
         //set delagates to the view controller
