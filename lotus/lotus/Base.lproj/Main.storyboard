@@ -40,13 +40,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Jw-ff9">
-                                <rect key="frame" x="16" y="13" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-7w-C26" userLabel="Login">
                                 <rect key="frame" x="190" y="495" width="85" height="85"/>
                                 <animations/>
@@ -219,6 +212,19 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="D3U-Xt-etH" kind="showDetail" action="showViewController:sender:" id="wzm-n5-QF3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rh-Jw-ff9">
+                                <rect key="frame" x="16" y="13" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="go to sync">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="16" y="13" width="79" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="6Wc-DV-0OF" kind="show" id="PKK-m2-D1z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -539,6 +545,6 @@
         <image name="twitterbtn.png" width="474" height="473"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WcS-dK-MtI"/>
+        <segue reference="PKK-m2-D1z"/>
     </inferredMetricsTieBreakers>
 </document>
