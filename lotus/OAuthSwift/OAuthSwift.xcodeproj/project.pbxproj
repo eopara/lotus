@@ -408,7 +408,7 @@
 					};
 					F43502791A6791B200038A29 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = SQ4MH8J926;
+						DevelopmentTeam = 3WW8KDG6BG;
 					};
 					F451E3C4195B8CD80051434C = {
 						CreatedOnToolsVersion = 6.0;
