@@ -30,12 +30,19 @@
 			</array>
 		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>FacebookAppID</key>
-	<string>383818531815197</string>
-	<key>FacebookDisplayName</key>
-	<string>Lotus</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb197381090601022</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>197381090601022</string>
+    <key>FacebookDisplayName</key>
+    <string>lotus</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

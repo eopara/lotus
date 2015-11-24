@@ -127,7 +127,11 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         view.addGestureRecognizer(tap)
         
         // Do any additional setup after loading the view.
+        loginBtn.enabled = false
         
+        
+        emailField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        pwField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         
         
         
@@ -137,6 +141,17 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
             print("already logged in")
         }
     }
+    
+    func textFieldDidChange(textField: UITextField) {
+        if emailField.text == "" || pwField.text == "" {
+            loginBtn.enabled = false
+        } else {
+            
+            loginBtn.enabled = true
+            loginBtn.titleLabel?.textColor = UIColor.blackColor()
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -154,8 +169,8 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.bottomViewConstraint.constant = keyboardFrame.size.height + 15
-            self.topLayoutConstraint.constant = self.topLayoutConstraint.constant - 200
-            self.secondRowConstraint.constant = self.secondRowConstraint.constant - 200
+            //self.topLayoutConstraint.constant = self.topLayoutConstraint.constant - 200
+            //self.secondRowConstraint.constant = self.secondRowConstraint.constant - 200
         })
     }
     
@@ -165,8 +180,8 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.bottomViewConstraint.constant = bottomStoredconstraint
-            self.topLayoutConstraint.constant = topStoredconstraint
-            self.secondRowConstraint.constant = rowStoredconstraint
+            //self.topLayoutConstraint.constant = topStoredconstraint
+            //self.secondRowConstraint.constant = rowStoredconstraint
         })
     }
     
@@ -205,7 +220,6 @@ class ViewController_Login: UIViewController, UITextFieldDelegate, FBSDKLoginBut
         
         
         gtherBtn.image = UIImage(named: "gtherbtn_white.png")
-        
         
         viewContainer.hidden = false
         viewContainer.fadeIn()

@@ -68,6 +68,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         monthTextField.delegate = self
         yearTextField.delegate = self
         emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         //setting the next field property
         self.fnTextField.nextField = self.lnTextField
@@ -77,6 +78,17 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         self.monthTextField.nextField = self.yearTextField
         self.yearTextField.nextField = self.emailTextField
         self.emailTextField = self.passwordTextField
+        
+        fnTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        lnTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        zipTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        dayTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        monthTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        yearTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        emailTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        passwordTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        
+
         
         
         dayTextField.inputView = UIView(frame: CGRectZero)
@@ -97,6 +109,19 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
         
         
+    }
+    
+    
+    
+    
+    func textFieldDidChange(textField: UITextField) {
+        if fnTextField.text == "" || lnTextField.text == "" || zipTextField.text == "" || dayTextField.text == "" || monthTextField.text == "" || yearTextField.text == "" || emailTextField.text == "" || passwordTextField.text == "" {
+            buttonNext.enabled = false
+        } else {
+            
+            buttonNext.enabled = true
+            buttonNext.titleLabel?.textColor = UIColor.blackColor()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -151,7 +176,7 @@ class ViewController_Profile: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         //next field method
-        if (textField == emailTextField) {
+        if (textField == passwordTextField) {
             textField.resignFirstResponder()
         }
         else {
